@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <title>Login</title>
+    
+    
+</head>
+
+<body>
+    <header> 
+        <nav class="nav-container container">
+           <picture>
+                <a href="../index.html" >
+                    <img src="../img/branding/logo_light_horizontal.svg" id="logo-sup" alt="Icono de FunkoShop">
+                </a>
+            </picture>    
+            <a class="navbar-link" href="">SALIR</a>
+        </nav>
+    </header>
+    <main>        
+        <section class="login-container container">
+            <h2>INGRESAR A MI CUENTA</h2>   
+            <div class="login-form-container">   
+                <form class="login-form" action="index.js" method="GET">
+                    <label class="login-form-label" for="user">Email:</label>
+                    <input type="text" name="user" id="user" placeholder="ejemplo@correo.com">
+                </form>
+                <form class="login-form"  action="index.js">
+                    <label class="login-form-label" for="paswword">Contraseña:</label>
+                    <input type="text" name="user" id="user" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
+                </form>
+            </div> 
+            <div class="login-buttom-container">
+                <button class="login-buttom-item">Ingresar</button>
+                <form action="index.js" type="GET">
+                    <input type="checkbox" name="recrodarme" id="recordarme">
+                    <label for="">Recordarme</label>
+                </form>
+            </div>
+            <a href="">Olvide mi contraseña</a>
+        </section>
+    </main>
+
+    <footer >
+        <nav class="nav-container container">
+            <ul>
+                <li>
+                    <a class="navbar-link" href="/pages/shop.html">SHOP</a>
+                </li>
+                <li>
+                    <a class="navbar-link" href="/pages/register.html">REGISTRARSE</a>
+                </li>
+                <li>
+                    <a class="navbar-link" href="/pages/login.html">INGRESAR</a>
+                </li>
+                <li>
+                    <a class="navbar-link" href="/pages/contacto.html">CONTACTO</a>
+                </li>
+            </ul>
+            <picture class="footer-logo">
+                <a href="./Challenge/index.html">
+                    <img src="../img/branding/isotype.svg" alt="">
+                </a>
+            </picture>
+        </nav>
+        <p class="footer-copy">All rights reserved 2023 - Funkoshop &copy;</p>
+    </footer>
+
+</body>
+</html>

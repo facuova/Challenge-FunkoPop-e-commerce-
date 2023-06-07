@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <title>Creat Item</title>
+    
+</head>
+
+<body>
+    <header> 
+        <nav class="container nav-container">
+           <picture >
+                <a href="../index.html" >
+                    <img src="../img/branding/logo_light_horizontal.svg" id="logo-sup" alt="Icono de FunkoShop">
+                </a>
+            </picture>    
+            <a href="">SALIR</a>
+        </nav>        
+    </header>
+    <main >        
+        <section class="editCreate-container container">
+            <h2>CREAR ITEM</h2>
+            <div class="editCreate-div1">    
+                <form class="editCreate-div1-form" action="" method="GET">
+                    <label class="login-form-label" for="">Categoría:</label>
+                    <select name="categorias" id="selectCategorias">
+                        <option value="figuras">Figuras</option>
+                    </select>
+                </form>
+                <form class="editCreate-div1-form" action="" method="GET">
+                    <label  class="login-form-label" for="">Licencia:</label>
+                    <select name="licencia" id="selectLicencia">
+                        <option value="figuras">Naruto Shippuden</option>
+                    </select>
+                </form>
+            </div>
+            <form class="editCreate-div1" action="">
+                <label class="login-form-label" for="">Nombre del producto:</label>
+                <input id="inputNombre" type="text" placeholder="Kakashi Hatake Shippuden Saga">
+            </form>    
+            <textarea name="NombreDeProducto" id="textDescProducto" cols="30" rows="10" placeholder="Figura Funko coleccionable de Kakashi Hatake de la saga Naruto Shipudden invocando chidori.  "></textarea>
+            <div class="editCreate-div1">
+                <form class="editCreate-div1-form" action="">
+                    <label class="login-form-label" for="">SKU:</label>
+                    <input id="inputSku" type="text" placeholder="SSK111AB001">
+                </form>    
+                <form class="editCreate-div1-form" action="">
+                    <label class="login-form-label" for="">PRECIO:</label>
+                    <input  id="inputSku" type="text" placeholder="$ 0.000,00">
+                </form> 
+                <form class="editCreate-div1-form" action="">
+                    <label class="login-form-label" for="">STOCK:</label>
+                    <input  id="inputStock" type="text" placeholder="1">
+                </form>     
+            </div>
+            <div class="editCreate-div1">
+                <form class="editCreate-div1-form" action="">
+                    <label class="login-form-label" for="">Descuento:</label>
+                    <input  id="inputDesc" type="text" placeholder="0.00%">
+                </form> 
+                <form class="editCreate-div1-form" action="" method="GET">
+                <label class="login-form-label" for="">Cuotas:</label>
+                    <select name="cuotas" id="selectCuotas">
+                        <option value="3coutas">3 Coutas sin interés</option>
+                        <option value="6coutas">6 Coutas sin interés</option>
+                        <option value="ahora12">AHORA 12</option>
+                    </select>
+                </form>
+            </div>
+            <div>
+                <form class="editCreate-div1-form" action="">
+                    <label class="login-form-label" for="">Imágenes:</label>
+                    <input type="file">
+                </form>
+            </div>
+            <div>
+                <picture>
+                    <img src="" alt="Imagen de funko de frente">
+                </picture>
+                <picture>
+                    <img src="" alt="Imagen de funko de dorso">    
+                </picture>
+            </div>
+            
+            <button class="login-buttom-item">Modificar Producto</button>
+        
+        </section>
+    </main>
+
+    <footer >
+        <nav class="nav-container container">
+            <ul>
+                <li>
+                    <a class="navbar-link" href="/pages/shop.html">SHOP</a>
+                </li>
+                <li>
+                    <a class="navbar-link" href="/pages/register.html">REGISTRARSE</a>
+                </li>
+                <li>
+                    <a class="navbar-link" href="/pages/login.html">INGRESAR</a>
+                </li>
+                <li>
+                    <a class="navbar-link" href="/pages/contacto.html">CONTACTO</a>
+                </li>
+            </ul>
+            <picture class="footer-logo">
+                <a href="./Challenge/index.html">
+                    <img src="../img/branding/isotype.svg" alt="">
+                </a>
+            </picture>
+        </nav>
+        <p class="footer-copy">All rights reserved 2023 - Funkoshop &copy;</p>
+    </footer>
+
+</body>
+</html>
