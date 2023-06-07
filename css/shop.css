@@ -1,0 +1,469 @@
+:root{
+    /*Colores*/
+    --primary-solid: #FF3333;
+    --primary-900: rgba(255, 51, 51, 0.9);
+    --primary-500: rgba(255, 51, 51, 0.5);
+    --primary-300: rgba(255, 51, 51, 0.3);
+
+    --secondary-solid: #1D84B5;
+    --secondary-900: rgba(29, 132, 181, 0.9);
+    --secondary-500: rgba(29, 132, 181, 0.5);
+    --secondary-300: rgba(29, 132, 181, 0.3);
+
+    --dark-solid: #1F1F1F;
+    --dark-900: rgba(31, 31, 31 0.9);
+    --dark-500: rgba(31, 31, 31 0.5);
+    --dark-300: rgba(31, 31, 31 0.3);
+
+    --dark-bg-solid: #30343F;
+    --light-bg-solid: #FAFAFF;
+    --light-font-solid: #FFFFFF;
+    --grey-font-solid:#4F4F4F;
+    --grey-light-ph-solid: #bdbdbddc;
+
+    /*Tipografía*/
+    --base-font: 'Inter', sans-serif;
+    --alternative-font: 'Raleway', sans-serif;
+    
+
+    /*Tamaño de fuente*/
+    --font-display: 4.6em;
+    --font-jumbo: 3.8em;
+    --font-xlarge: 3em;
+    --font-large: 2.4em;
+    --font-intermediate:2rem;
+    --font-medium: 1.8em;
+    --font-small: 1.6em;
+    --font-xsmall: 1.2em;
+
+    /*Espacios*/
+    --spacing-291: 29.1rem;
+    --spacing-128: 12.8rem;
+    --spacing-68: 6.8rem;
+    --spacing-36: 3.6rem;
+    --spacing-28: 2.8rem;
+    --spacing-24:2.4rem;
+    --spacing-20: 2rem;
+    --spacing-16: 1.6rem;
+    --spacing-12: 1.2rem;
+    --spacing-8: 0.8rem;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--base-font);
+    font-size: 62.5%; /*  medida(16px = 1em) calculo(16px*0.625 = 10px)*/
+    color: var(--dark-solid);
+}
+
+a {
+    font-family: inherit;
+    text-decoration: none;
+    color: inherit;
+    padding: 10px;
+}
+
+header,
+footer {
+    position: relative ;
+    font-family: var(--alternative-font); 
+    color: var(--light-font-solid);
+    background-color: var(--dark-bg-solid);
+}
+
+header nav{
+    padding-top: var(--spacing-16);
+    padding-bottom: var(--spacing-16);
+}
+
+ul, ol {
+    list-style-type: none;
+}
+
+footer nav {
+    padding-top: var(--spacing-16);
+    padding-bottom: var(--spacing-16);
+    margin-top: var(--spacing-68);
+}
+/*Acá empiezo a crear las clases. En esta sección vamos a usar grid*/
+/*La intención no es hacerlo perfecto y ni optimizar código sino aprender
+al máximo la funcionalidad de grid. Entiendo que hay código de más y 
+que en algunos lados era mejor combinar grid y flexbox pero la intención
+era aprender, practicar y conocer al máximo esta herramienta*/
+
+/* Un container para poner todo dentro de 1200px*/
+.container {
+    max-width: 120rem;
+    margin: auto;
+}
+/*El grid de la barra posiciona de forma horizontal el logo y el menu*/
+.grid-container-barnav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px;
+}
+/*Acá ingrese con .clase etiqueta para probar*/
+.grid-container-barnav picture{
+    align-self:center;
+}
+/*Esta es la clase de la grilla del menú superior izquierdo*/
+.grid-container-barnav-ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    place-content:center;
+    justify-self: end;
+    column-gap: var(--spacing-20);
+    font-size: var(--font-intermediate);
+}
+/*A SHOP y el ICONO DEL CARRITO los tuve que acomodar individualmente por 
+ser de distinto tamaño a las otras opciones del menú*/
+.grid-container-barnav-ul-item-1{
+    justify-self:end;
+}
+
+.grid-container-barnav-ul-item-4{
+    justify-self:start;
+}
+
+.navbar-link {
+    padding: var(--spacing-8) var(--spacing-16);
+    display: inline-block;
+    transition: background .3s ease-in-out;
+    position: relative;
+}
+
+.navbar-link:hover {
+    background-color: var(--primary-900);
+}
+
+.with-icon {
+    display: flex;
+    align-items: center;
+    gap:var(--spacing-8);
+}
+
+.with-submenu:hover .submenu {
+    display:block;
+}
+
+.submenu {
+    display:none;
+    width: 300px;
+    position:absolute;
+    background-color: var(--dark-bg-solid);
+    z-index: 1;
+}
+
+.submenu-item {
+    display:block;
+    padding: var(--spacing-8) var(--spacing-16);
+}
+
+.submenu-link {
+    display:block;
+    font-size: medium;
+    transition: background .3s ease-in-out;
+}
+
+.submenu-link:hover {
+    background-color: var(--primary-900);
+}
+/*Esta es la grilla PRINCIPAL. Tiene 4 columnas y 4 filas Acá se empieza a 
+coplejizar. Había diseñado el html para relaizarlo con flexbox pero después 
+se me ocurrio ir haciendo cada página con distintas herramientas.
+Tuve que adapater el html para organizarlo mejor con grid.*/
+.grid-container-main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 45rem 45rem 45rem 8rem;
+    place-content: stretch;
+    place-items: stretch;
+    gap:var(--spacing-16);
+} 
+.grid-container-main img {
+    width: 300px; 
+    max-width: 100%;}
+/*Acá empieza la SIDEBAR con los formularios para hacer el filtro de busqueda
+Entiendo que hay mucho código repetido, pero fue la manera que pude lograrlo respetando
+la idea de hacerlo con grid. Creo que de combinar flexbox y grid, hubiera sido
+más rápido y menos código, ya que en el formulario de FILTRAR cree muchas claes similares*/ 
+/*Un container general para ponerle un margen superior y un padding auto*/
+.container-form{
+   margin-top: var(--spacing-68);  
+   padding: auto;
+}
+/*La fuente de todos los parafos de los formularios*/
+.form-min-max p {
+    font-size: var(--font-small);
+}
+/*La fuente  y margenes de  los títulos de los formularios*/
+h5 {
+    font-size: var(--font-large);
+    margin-bottom: var(--spacing-8);
+}
+/*Esto lo saqué de internet. Acá modifiqué los inputs
+Este es el input de BUSCAR*/
+input[type=text] {
+    width: 24.3rem;
+    height: 2.8rem;
+    border: solid 2px;
+    border-radius: 6px;
+    margin-bottom: var(--spacing-16)
+}
+
+input[type=text]::placeholder {
+    color: var(--grey-light-ph-solid) ;
+}
+
+/*Este el select de ORDENAR POR*/
+select {
+    width: 24.3rem;
+    height: 2.8rem;
+    border: solid 0.2rem;
+    border-radius: 0.6rem;
+    margin-bottom: var(--spacing-16);    
+}
+
+/*Este es el input de PRECIO*/
+input[type=numbers] {
+    width: 6.0rem;
+    height: 2.8rem;
+    border: solid 2px;
+    border-radius: 6px;
+    margin-bottom: var(--spacing-16);
+}
+
+input[type=numbers]::placeholder {
+    color: var(--grey-light-ph-solid);
+    text-align: center;
+}
+
+/*Esta es la grilla de FILTRAR. Realicé 4 columnas y 5 filas
+Hasta ahí todo normal*/
+.grid-container-form-filt{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 3rem);
+    row-gap:0.3rem;
+    column-gap:var(--spacing-8);   
+}
+/*Este es el input de los checbox de FILTRAR*/
+input[type=checkbox] {
+    transform: scale(1.5);    
+}
+/*Acá empieza el ataque de clases asesinas*/
+/*Cree una clase por cada input y por cada label. No se si es la forma correcta
+ya que hay muchas clases similares solo cambia la ubicación de la fila y la columna
+Pero fue la forma que encontré para acomodar todo la sección de FILTRAR*/
+.grid-container-form-filt-titulo{
+    grid-column: 1/3;
+    grid-row: 1;
+    justify-self: start;
+}
+
+.grid-container-form-filt-input-1{
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: end;
+}
+
+.grid-container-form-filt-label-1{
+    font-size: var(--font-small);
+    grid-column: 2/5;
+    grid-row: 2;
+    justify-self: start;
+    align-self: center;
+}
+
+.grid-container-form-filt-input-2{
+    grid-column: 1;
+    grid-row: 3;
+    justify-self: end;
+}
+
+.grid-container-form-filt-label-2{
+    font-size: var(--font-small);
+    grid-column: 2/5;
+    grid-row: 3;
+    justify-self: start;
+    align-self: center;
+}
+
+.grid-container-form-filt-input-3{
+    grid-column: 1;
+    grid-row: 4;
+    justify-self: end;
+}
+
+.grid-container-form-filt-label-3{
+    font-size: var(--font-small);
+    grid-column: 2/5;
+    grid-row: 4;
+    justify-self: start;
+    align-self: center;
+}
+
+.grid-container-form-filt-input-4{
+    grid-column: 1;
+    grid-row: 5;
+    justify-self: end;
+}
+
+.grid-container-form-filt-label-4{
+    font-size: var(--font-small);
+    grid-column: 2/5;
+    grid-row: 5;
+    justify-self: start;
+    align-self: center;
+}
+/*Estas son las clases que acomodan las img de losproductos y descripción en las 
+columnas y fila correspondiente*/
+article {
+    padding-bottom: var(--spacing-16);
+}
+.grid-container-section-1 {
+    margin-top: var(--spacing-68);
+    margin-bottom: var(--spacing-68);
+    grid-column: 2;
+    grid-row: 1 /4;
+}
+
+.grid-container-section-2 {
+    margin-top: var(--spacing-68);
+    margin-bottom: var(--spacing-68);
+    grid-column: 3;
+    grid-row: 1 /4;
+}
+
+.grid-container-section-3 {
+    margin: var(--spacing-68) 0;
+    grid-column: 4;
+    grid-row: 1 /4;
+}
+
+.card-item-picture {
+    display: flex;
+    position: relative;
+}
+
+.card-item-picture img{
+    animation: fade .7s;
+}
+
+.card-item-img-back {
+    display:none;
+}
+
+.card-item-picture:hover .card-item-img-back {
+    display:block;
+}
+
+.card-item-picture:hover .card-item-img-front {
+    display:none;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/*La fuente y margen del precio de los productos*/
+div p {
+    font-family: var(--alternative-font);
+    font-size: var(--font-medium);
+    color:var(--grey-font-solid);
+    font-weight: 400;
+    margin-bottom: var(--spacing-12);
+}
+/*La fuente y margen de la descripción de los productos*/
+div p:first-child {
+    font-family: var(--alternative-font);
+    font-size: var(--font-small);
+    font-weight: 400;
+    color:var(--grey-font-solid);
+    margin-bottom: var(--spacing-12);
+}
+
+/*La fuente y margen de los títlos de los productos*/
+div h4 {
+    font-size: var(--font-medium);
+    margin-bottom: var(--spacing-12);
+}
+/*Y con este flasheeee!!! No podía creer que me salió!!!
+La fuente y color del 3° p de los productos.El de "3 coutas sin interés"*/
+div p:last-child{
+    font-size: var(--font-xsmall);
+    color:var(--secondary-900);
+    font-weight: 700;
+}
+/*Esta es la clase para ubicar los botones de cambio de página dentro del SHOP*/
+.grid-container-div {
+    grid-column: 1 / 5;
+    grid-row: 4;  
+    align-self: end;  
+    justify-self: center;
+    
+}
+
+.grid-container-div button {
+    width: 4.4rem;
+    height: 4.4rem;
+    background-color: var(--light-bg-solid);
+    font-size: var(--font-small);
+    font-weight: bold;
+    color: var(--dark-bg-solid);
+    border: solid 1px;
+    border-color:#DFE3E8;
+    border-radius: 0.4rem;   
+
+}
+/*.grid-container-div button:hover:*/
+.grid-container-footerNavbar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    row-gap: var(--spacing-36);
+    padding-top: var(--spacing-68);
+}
+/*Acá entramos por medio de ID*/
+#footerNavbar-item1{
+    display:grid;
+    grid-column: 1/2;
+    grid-row: 1/3;  
+}
+
+#footerNavbar-item1 a{
+    width: max-content;
+    font-size: var(--font-intermediate);
+    padding: var(--spacing-8) var(--spacing-16);
+}
+
+#footerNavbar-item2{
+    grid-column: 3/4;
+    grid-row: 1/3;
+    justify-self:end;
+    align-self: end; 
+}
+
+#footerNavbar-item3 {
+    grid-column: 2/3;
+    grid-row: 3/4;   
+    align-self: end; 
+    justify-self: center; 
+    font-size: var(--font-intermediate);    
+}
+
+
+    
