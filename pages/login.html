@@ -27,21 +27,21 @@
             <div class="login-form-container">   
                 <form class="login-form" action="index.js" method="GET">
                     <label class="login-form-label" for="user">Email:</label>
-                    <input type="text" name="user" id="user" placeholder="ejemplo@correo.com">
+                    <input type="text" name="user" id="userEmailInput" placeholder="ejemplo@correo.com">
                 </form>
                 <form class="login-form"  action="index.js">
                     <label class="login-form-label" for="paswword">Contraseña:</label>
-                    <input type="text" name="user" id="user" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
+                    <input type="text" name="user" id="userPasswordlInput" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
                 </form>
             </div> 
             <div class="login-buttom-container">
-                <button class="login-buttom-item">Ingresar</button>
+                <button class="login-buttom-item" id="loginButton">Ingresar</button>
                 <form action="index.js" type="GET">
-                    <input type="checkbox" name="recrodarme" id="recordarme">
+                    <input type="checkbox" name="recordarme" id="remindMe">
                     <label for="">Recordarme</label>
                 </form>
             </div>
-            <a href="">Olvide mi contraseña</a>
+            <a href="" id="forgotPassword">Olvidé mi contraseña</a>
         </section>
     </main>
 
@@ -69,6 +69,6 @@
         </nav>
         <p class="footer-copy">All rights reserved 2023 - Funkoshop &copy;</p>
     </footer>
-
+    <script src="/login.js"></script>
 </body>
 </html>

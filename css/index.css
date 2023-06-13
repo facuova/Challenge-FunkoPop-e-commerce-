@@ -31,14 +31,14 @@ la familia de fuentes*/
     --alternative-font: 'Raleway', sans-serif;
 
     /*Tamaño de fuente*/
-    --font-display: 4.6rem;
-    --font-jumbo: 3.8rem;
-    --font-xlarge: 3rem;
-    --font-large: 2.4rem;
-    --font-intermediate:2rem;
-    --font-medium: 1.8rem;
-    --font-small: 1.6rem;
-    --font-xsmall: 1.2rem;
+    --font-display: 4.6em;
+    --font-jumbo: 3.8em;
+    --font-xlarge: 3em;
+    --font-large: 2.4em;
+    --font-intermediate:2em;
+    --font-medium: 1.8em;
+    --font-small: 1.6em;
+    --font-xsmall: 1.2em;
 
     /*Espacios*/
     --spacing-291: 29.1rem;
@@ -71,13 +71,13 @@ a {
     font-family: inherit;
     text-decoration: none;
     color: inherit;
-    padding: var(--spacing-8);
+    padding: 10px;
 }
 
 header,
 footer {
     font-family: var(--alternative-font); 
-    font-size: var(--font-xsmall);
+    font-size: var(--font-intermediate);
     color: var(--light-font-solid);
     background-color: var(--dark-bg-solid);
 }
@@ -90,25 +90,21 @@ header nav{
 ul, ol {list-style-type: none}
 
 h3 {
-    text-align: center;
     font-family: var(--alternative-font);
-    font-size: var(--font-jumbo);
+    font-size: var(--font-display);
     font-weight: 500;
 }
 
 p {
-    text-align:center;
     font-family: var(--alternative-font);
     font-size: var(--font-large);
     font-weight: 400;
     color:var(--grey-font-solid);
-
 }
 
 h2 {
-    text-align:center;
     font-family: var(--alternative-font);
-    font-size: var(--font-jumbo);
+    font-size: var(--font-display);
     font-weight: 700;
 }
 
@@ -117,47 +113,33 @@ footer nav {
     padding-bottom: var(--spacing-68);
 }
 
-img {
-    width: 75%;
-    margin: auto;
-}
-
+main img {width: 100%}
 /*Acá empezas a crear las clases. La clase flex-container con direcion de fila seria la principal y luego defino la clase 
 flex-container-xxxxxx con direccion de columna que sería la clase hija para ser más específico.
 Luego para ir entrando a cada etiqueta voy a usar la ".clase etiqueta {}" para acceder a cada uno de los hijos 
 y darle el formato deseado*/
 
-/*Header
-Empezamos a hacerlo responsive*/
 .container {
-    width: 34rem;
-    margin:auto;
+    max-width: 120rem;
+    margin: 0 auto;
 }
+
 .nav-container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    gap: var(--spacing-8);
 }
-
-.nav-container > picture > a > img {
-    margin-left: 3.2rem;
-}
-
+ /*Header*/
 .navbar-list {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: var(--spacing-8);
-}
-
-.navbar-list img {
-    width: 50%;
+    gap: var(--spacing-20);
 }
 
 .navbar-link {
-    padding: var(--spacing-8) var(--spacing-8);
+    padding: var(--spacing-8) var(--spacing-16);
     display: inline-block;
     transition: background .3s ease-in-out;
     position: relative;
@@ -187,7 +169,7 @@ Empezamos a hacerlo responsive*/
 
 .submenu-item {
     display:block;
-    padding: var(--spacing-8) var(--spacing-8);
+    padding: var(--spacing-8) var(--spacing-16);
 }
 
 .submenu-link {
@@ -202,9 +184,10 @@ Empezamos a hacerlo responsive*/
 
 /*banner*/
 .banner {    
-    background-image: url(../img/funkos-banner.webp); 
-    padding-top: var(--spacing-68);
-    padding-bottom: var(--spacing-68);
+    background-image: url(../img/funkos-banner.webp);
+    background-size:cover;
+    padding-top: var(--spacing-128);
+    padding-bottom: var(--spacing-128);
     background-attachment: fixed;
     position:relative;
 }
@@ -223,7 +206,7 @@ Empezamos a hacerlo responsive*/
 .banner-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     gap:var(--spacing-20);
     z-index: 2;
     position: relative;
@@ -235,7 +218,6 @@ Empezamos a hacerlo responsive*/
 }
 
 .banner-text {
-    text-align: center;
     font-size: var(--font-medium);
     color: var(--light-font-solid);  
 }
@@ -259,8 +241,7 @@ Empezamos a hacerlo responsive*/
 }
 /*Collection*/
 .collection {
-    display: flex;
-    flex-direction: column;  
+    display: flex;      
 }
 
 .main-container {
@@ -270,25 +251,26 @@ Empezamos a hacerlo responsive*/
     margin: var(--spacing-36) 0 ;
 }
 
+.collection:nth-child(2) .prueba{
+    order: -1;    
+}
+
 .collection-article {
     display: flex;
     flex-direction: column; 
     justify-content: center;
-    align-items: center;
     gap:var(--spacing-24);
 }
 
-.collection > picture {
+.collection-article-text {
+    display: inline-block;
     border-bottom: solid var(--primary-900);
-    padding-bottom: var(--spacing-20); 
-}
-
-.collection > picture > img {
-    margin-left: 3.2rem;
-   
+    padding-bottom: var(--spacing-20);    
 }
 
 .collection-article-link {
+    display: inline-block;
+    align-self: start;
     font-size: var(--font-large);
     background-color: var(--dark-bg-solid);
     color:var(--light-font-solid);
@@ -298,6 +280,7 @@ Empezamos a hacerlo responsive*/
     padding: var(--spacing-12) var(--spacing-36);
     transition: background .3s ease-in-out;
 }
+
 .collection-article-link:hover {
     background-color: var(--primary-900);
 }
@@ -307,12 +290,11 @@ Empezamos a hacerlo responsive*/
     flex-direction: column;
     align-items: flex-start;
     gap:var(--spacing-16);
-    
 }
 
 .slider-items {
-    display: flex;
-    flex-direction: column;
+    display:flex;  
+    gap: var(--spacing-24)
 }
 
 .card-item {
@@ -324,7 +306,7 @@ Empezamos a hacerlo responsive*/
 .card-item-div  {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: var(--spacing-12);
     padding: var(--spacing-16);
 }
@@ -394,17 +376,12 @@ Empezamos a hacerlo responsive*/
     }
 }
 
-.footer-container{
-    display: flex;
-    flex-direction: row;
-}
-
 .footer-logo{
     align-self: flex-end;
 }
 
 .footer-copy {
-    font-size: var(--spacing-16);
+    font-size: var(--spacing-20);
     color:var(--light-bg-solid);
     text-align: center;
     padding-bottom:var(--spacing-16);
@@ -441,8 +418,6 @@ Empezamos a hacerlo responsive*/
 }
 
 input[type=text] {
-    font-size: var(--font-small);
-    font-family: var(--alternative-font);
     border: 2px solid var(--light-bg-solid);
     border-bottom: 2px solid var(--primary-900);
 }
@@ -453,6 +428,7 @@ input[type=text]:focus {
 }
 
 input[type=text]::placeholder {
+    font-style: italic;
     color: var(--grey-light-ph-solid) ;
 }
 
@@ -492,7 +468,7 @@ input[type=checkbox] {
     font-weight: 700;
 }
 
-/*Item*/
+/*Item adn create*/
 
 .item-container {
     display: grid;
@@ -555,85 +531,183 @@ input[type=numbers] {
     font-weight: 700;
 }
 
-/*edit and create item*/
-.editCreate-container {
-    display: flex;
+/*Acá realizamos el breakpoint para celulares con un maximo de 400px.*/
+@media screen and (max-width: 400px) {
+
+  a {
+    padding: var(--spacing-8);
+  }
+
+  header,
+  footer {
+    font-size: var(--font-xsmall);
+  }
+
+  h3 {
+    text-align: center;
+    font-size: var(--font-jumbo);
+  }
+
+  p {
+    text-align: center;
+    font-size: var(--font-intermediate);
+  }
+
+  h2 {
+    text-align:center;
+    font-size: var(--font-jumbo);
+  }
+
+  img {
+    width: 75%;
+  }
+  /*Header*/
+  .container {
+    width: 34rem;
+    margin:auto;
+  }
+  
+  .nav-container {  
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    gap:var(--spacing-28);
-    padding: var(--spacing-36) 0;
-    background-size: cover;
-}
-
-.editCreate-container h2{
-    font-size: var(--font-display);
-}
-
-.editCreate-div1 {
-    display: flex;
-    flex-direction: row;
-    gap: var(--spacing-36);
-}
-
-.editCreate-div1-form {
-    display: flex;
-    flex-direction: row;
     align-items: center;
-    gap: var(--spacing-20);
-}
+    gap: var(--spacing-8);
+  }
 
-select {
-    font-size: var(--font-intermediate);
-    padding-left: var(--spacing-8);
-}
+  .nav-container > picture > a > img {
+    margin-left: 3.2rem;
+  }
 
-#selectCategorias  {
-    width: 24.5rem;
-    height: 4.428rem;
-    border: 2px solid var(--dark-bg-solid);
-    border-radius: 6px;
-}
+  .navbar-list {
+    gap: var(--spacing-8);
+  }
 
-#selectLicencia {
-    width: 24.5rem;
-    height: 4.428rem;
-    border: 2px solid var(--dark-bg-solid);
-    border-radius: 6px;
-}
+  .navbar-list img {
+    width: 50%;
+  }
 
-#inputNombre {
-    width: 24.5rem;
-}
+  .navbar-link {
+    padding: var(--spacing-8) var(--spacing-8);
+  }
 
-#textDescProducto {
-    font-family: var(--base-font);
+  .navbar-link:hover {
+    background-color: var(--primary-900);
+  }
+
+  .with-submenu:hover .submenu {
+    display:block;
+  }
+
+  .submenu {
+    width: var(--spacing-128);
+  }
+
+  .submenu-item {
+    padding: 0 var(--spacing-8);
+  }
+
+  .submenu-link {
+    font-size: var(--font-xsmall);
+  }
+
+  .submenu-link:hover {
+    background-color: var(--primary-900);
+  }
+
+  /*banner*/
+  .banner {    
+    background-size: auto;
+    padding-top: var(--spacing-68);
+    padding-bottom: var(--spacing-68);
+  }
+
+  .banner-container {
+    align-items: center;
+  }
+
+  .banner-text {
+    text-align: center;
     font-size: var(--font-medium);
-    font-weight: 700;
-    padding: var(--spacing-8);
-    width: 85%;
-    border: 2px solid var(--dark-bg-solid);
-    border-radius: 6px;
-}
+    color: var(--light-font-solid);  
+  }
 
-#selectCuotas {
-    width: 34.5rem;
-    height: 4.428rem;
-    border: 2px solid var(--dark-bg-solid);
-    border-radius: 6px;
-}
+  /*Collection*/
+  .collection {
+    display: flex;
+    flex-direction: column;  
+  }
 
-#inputSku {
+  .collection:nth-child(2) .prueba{
+    order: 2;    
+  }
+  .collection-article {
+    align-items: center;
+  }
+  
+  .collection-article-text {
+    border-bottom: solid var(--light-bg-solid);
+    padding-bottom: 0;    
+  }
+  .collection > picture {
+    border-bottom: solid var(--primary-900);
+    padding-bottom: var(--spacing-20); 
+  }
+
+  .collection-article-link {
+    align-self: center;
+    font-size: var(--font-intermediate);
+    margin-top:0 ;
+  }
+  
+  .slider {
+    gap:var(--spacing-8);  
+  }
+
+  .slider-items {
+    flex-direction: column;
+    gap: var(--spacing-12);
+  }
+ 
+  .card-item-div  {
+    align-items: center;
+    gap: var(--spacing-8);
+    padding: var(--spacing-12);
+  }
+
+  .card-item-div-text{
+    font-size: var(--font-xsmall);
+  }
+
+  .card-item-div-title {
+    font-size: var(--font-small);
+  }
+
+  .card-item-div-price {
+    font-size: var(--font-small);
+  }
+
+  .footer-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-copy {
+    font-size: var(--spacing-16);
+    padding-bottom:var(--spacing-16);
+  }
+
+  /*Item*/
+  .item-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .item-article {
+    align-items: center;
+  }
+
+  .item-article-offers {
     text-align: center;
-    width:var(--spacing-128) ;
-}
-
-#inputStock {
-    text-align: center;
-    width: 5.5rem;
-}
-
-#inputDesc {
-    text-align: center;
-    width: 5.5rem;
+  }
 }

@@ -27,32 +27,32 @@
             <div class="login-form-container">
                 <form class="login-form" action="">
                     <label class="login-form-label" for="">Nombre:</label>
-                    <input type="text" placeholder="John">
+                    <input type="text" placeholder="John" id="registerUserName">
                 </form>
                 <form class="login-form" action="">
                     <label class="login-form-label" for="">Apellido:</label>
-                    <input type="text" placeholder="Doe">
+                    <input type="text" placeholder="Doe" id="registerUserLastName">
                 </form> 
                 <form class="login-form" action="">
                     <label class="login-form-label" for="">Email:</label>
-                    <input type="text" placeholder="johndoe@correo.com">
+                    <input type="text" placeholder="johndoe@correo.com" id="registerUserEmail">
                 </form> 
                 <form class="login-form" action="">
                     <label class="login-form-label" for="">Contraseña:</label>
-                    <input type="text" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
+                    <input type="text" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" id="registerUserPassword">
                 </form> 
                 <form class="login-form" action="">
                     <label class="login-form-label" for="">Repita Contraseña:</label>
-                    <input type="text" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
+                    <input type="text" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" id="registerUserConfirmPass">
                 </form>
             </div>
             
             <div class="login-buttom-container">
-                <button class="login-buttom-item">Registrar</button>
+                <button class="login-buttom-item" id="registerButton">Registrar</button>
                 <form action="index.js" type="GET">
-                    <input type="checkbox" name="recrodarme" id="recordarme">
+                    <input type="checkbox" name="terminosCondiciones" id="termsAndCondChek">
                     <label for="">Acepto</label>
-                    <a href="">Termino y condiciones</a>
+                    <a href="" id="termsAndConditions">Termino y condiciones</a>
                 </form>
             </div>
         </section>
@@ -84,6 +84,6 @@
         </section>
         <p class="footer-copy">All rights reserved 2023 - Funkoshop &copy;</p>
     </footer>
-
+    <script src="/register.js"></script>
 </body>
 </html>
