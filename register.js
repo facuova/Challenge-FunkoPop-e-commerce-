@@ -1,3 +1,4 @@
+var usuarios = []
 
 //**REGISTER**
 //1 - Seleccionnar elementos
@@ -9,16 +10,23 @@ var termsAndCondChek = document.getElementById('termsAndCondChek');
 var registerButton = document.getElementById('registerButton');
 var termsAndConditions = document.getElementById('termsAndConditions');
 //2 - Capturar info cuando se hace click
-//2a - check de acepto terminos y condiciones
+//2a - Validaciones de datos
+//2b - check de acepto terminos y condiciones
+//2c - Guardar info en array "usuarios"
 registerButton.addEventListener('click', function(){
-  var userName = registerUserName.value;
-  var userLastName = registerUserLastName.value;
-  var userEmail = registerUserEmail.value;
-  var userPassword = registerUserPassword.value;
-  console.log(userName);
-  console.log(userLastName);
-  console.log(userEmail);
-  console.log(userPassword);
+    var userName = registerUserName.value;
+    var userLastName = registerUserLastName.value;
+    var userEmail = registerUserEmail.value;
+    var userPassword = registerUserPassword.value;
+  
+    var usuario = {
+        name: userName,
+        lastName: userLastName,
+        email: userEmail,
+        password: userPassword,
+    }
+    
+    usuarios.push(usuario)
 })
-//3 - Validaciones de datos
-//4 - Guardar info en array "usuarios"
+
+
