@@ -6,7 +6,6 @@ usuarios = [
     }
 ]
 
-
 //**LOGIN**   
 //1 - Seleccionnar elementos
 var emailInput = document.getElementById('userEmailInput');

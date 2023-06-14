@@ -12,13 +12,14 @@ var termsAndConditions = document.getElementById('termsAndConditions');
 //2 - Capturar info cuando se hace click
 //2a - Validaciones de datos
 //2b - check de acepto terminos y condiciones
-//2c - Guardar info en array "usuarios"
+
 registerButton.addEventListener('click', function(){
     var userName = registerUserName.value;
     var userLastName = registerUserLastName.value;
     var userEmail = registerUserEmail.value;
     var userPassword = registerUserPassword.value;
-  
+    
+    //2c - Guardar info en array "usuarios" 
     var usuario = {
         name: userName,
         lastName: userLastName,
