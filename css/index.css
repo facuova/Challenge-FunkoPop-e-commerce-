@@ -531,6 +531,89 @@ input[type=numbers] {
     font-weight: 700;
 }
 
+/*edit and create item*/
+.editCreate-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap:var(--spacing-28);
+  padding: var(--spacing-36) 0;
+  background-size: cover;
+}
+
+.editCreate-container h2{
+  font-size: var(--font-display);
+}
+
+.editCreate-div1 {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-36);
+}
+
+.editCreate-div1-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--spacing-20);
+}
+
+select {
+  font-size: var(--font-intermediate);
+  padding-left: var(--spacing-8);
+}
+
+#selectCategorias  {
+  width: 24.5rem;
+  height: 4.428rem;
+  border: 2px solid var(--dark-bg-solid);
+  border-radius: 6px;
+}
+
+#selectLicencia {
+  width: 24.5rem;
+  height: 4.428rem;
+  border: 2px solid var(--dark-bg-solid);
+  border-radius: 6px;
+}
+
+#inputNombre {
+  width: 24.5rem;
+}
+
+#textDescProducto {
+  font-family: var(--base-font);
+  font-size: var(--font-medium);
+  font-weight: 700;
+  padding: var(--spacing-8);
+  width: 85%;
+  border: 2px solid var(--dark-bg-solid);
+  border-radius: 6px;
+}
+
+#selectCuotas {
+  width: 34.5rem;
+  height: 4.428rem;
+  border: 2px solid var(--dark-bg-solid);
+  border-radius: 6px;
+}
+
+#inputSku {
+  text-align: center;
+  width:var(--spacing-128) ;
+}
+
+#inputStock {
+  text-align: center;
+  width: 5.5rem;
+}
+
+#inputDesc {
+  text-align: center;
+  width: 5.5rem;
+}
+
 /*Acá realizamos el breakpoint para celulares con un maximo de 400px.*/
 @media screen and (max-width: 400px) {
 
