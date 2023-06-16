@@ -2,6 +2,7 @@ var usuarios = []
 var prueba = 'susanahoria@gmail.com'
 var prueb2 = 'susanahoria@gmail.xxx'
 //**REGISTER**
+
 //1 - Seleccionnar elementos del formualrio de registro
 //Variables generales
 var registerUserName = document.getElementById('registerUserName');
@@ -11,25 +12,28 @@ var registerUserPassword = document.getElementById('registerUserPassword');
 var termsAndCondChek = document.getElementById('termsAndCondChek');
 var registerButton = document.getElementById('registerButton');
 var termsAndConditions = document.getElementById('termsAndConditions');
-//1 APELLIDO Y NOMBRE 
 
-//2 - EMAIL - Capturar info cuando se hace click
+//2 Capturar data, validar y guardarla en el local storage cuando se hace click
 registerButton.addEventListener('click', function(){
-  //2a - Crear objeto usuarios para almacenar valores del input  
-  var usuario = {name: userName, lastName: userLastName, email: userEmail, password: userPassword,}
+
   var termsAndCond = termsAndCondChek.checked
   var userName = registerUserName.value;
   var userLastName = registerUserLastName.value;
   var userEmail = registerUserEmail.value;
   var userPassword = registerUserPassword.value;
   var userConfirmPass = registerUserConfirmPass.value; 
+
+  //2a - Crear objeto usuarios para almacenar valores del input  
+  var usuario = {name: userName, lastName: userLastName, email: userEmail, password: userPassword,}
+  
   //2b - Validaciones de datos
   var formatoNameValido = validarFormatoNombre(userName);
   var formatoLastNameValido = validarFormatoApellido(userLastName)
   var formatoEmailValido = validarFormatoEmail(userEmail);
   var dominioEmailValido = validarDominioEmail(userEmail, dominios);
   var formatoPassValido = validarFormatoPass(userPassword)
-
+  
+  //2c - Mensajes de errores antes validaciones erróneas 
   if (formatoNameValido === false || userName === '') {
     alert('Por favor ingrese un Nombre válido')
   }
@@ -49,14 +53,14 @@ registerButton.addEventListener('click', function(){
   else if (userPassword !== userConfirmPass){
     alert('Contraseña y Repita Contraseña deben coincidir')
   }
-
+  //Si los datos con correctos
   else {
-    console.log('Datos válido')
+    //2d - Validar check de térimnos y condiciones
     if (termsAndCond) {
-        //Guardar objeto "usuario" en array "usuarios"
-        console.log('Registro recibido');
+        //2e - Guardar objeto "usuario" en array "usuarios"
+        console.log('Registro recibido', usuario);
         usuarios.push(usuario);
-        //Simular envio de datos. Se guardan en el local storage usuarios
+        //2f - Simular envio de datos. Se guardan en el local storage usuarios.
         //console.log('Datos guardados en Local Storage')
         //localStorage.setItem('usuarios', JSON.stringify(usuarios));
       }
