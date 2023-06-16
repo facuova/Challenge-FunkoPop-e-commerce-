@@ -14,7 +14,6 @@ var loginButton = document.getElementById('loginButton');
 var remindMeInput = document.getElementById('remindMe');
 var forgotPassword = document.getElementById('forgotPassword');
 
-
 //2 - Capturar info cuando se hace click
 loginButton.addEventListener('click', function() {
     var email = emailInput.value;
@@ -31,11 +30,6 @@ loginButton.addEventListener('click', function() {
 
 //3- comparar usuario y password que viene en el input contra el array de usuarios y devolver true o false si 
 //usuario y password son correctos
-
-var regexCom = /\.com$/;
-var regexOrg = /\.org$/;
-//const dominiosValidacion = [regexCom,regexOrg] 
-
 function validarData(email, password) {
   if (email === '') {
     alert('Campo vacio. Por favor, ingrese email.');
@@ -63,33 +57,7 @@ function validarData(email, password) {
   }  
 }
 
-function validarDominio (dominio, lista) {
-  for (var i = 0; i < lista.length; i++) {
-    if (lista[i].test(dominio)) {
-      console.log("El dominio es válido: " + dominio);
-      break; // Terminar el bucle si se encuentra una coincidencia
-    }
-    else {
-      console.log("El dominio no es válido: " + dominio);
-    }
-  }
-}
-
 //4- Boton de restablecer contraseña - hacer un prompt para que el usuario pueda cargar su email
 forgotPassword.addEventListener('click', () => {
   prompt('Ingresar correo registrado para recibir código de autenticación')
 })
-
-console.log('Si yo aparezco, llegaste al final')
-
-var dominiosValidación = [regexCom, regexOrg];
-var dominio = "example.com";
-
-function validarDominio(email) {
-  for (var i = 0; i < dominiosValidación.length; i++) {
-    if (dominiosValidación[i].test(dominio)) {
-      console.log("El dominio es válido: " + dominio);
-      break; // Terminar el bucle si se encuentra una coincidencia
-    }
-  }
-}
