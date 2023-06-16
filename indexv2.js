@@ -1,28 +1,16 @@
-//Método validación de dominión nuevo
-var formatoEmailvalido = false
-var pruebaFormato  = dominios.some(function(elemento) {  
-    formatoEmailvalido =  elemento.test(formato2);   
-    return formatoEmailvalido
+
+var termsAndConditionsLink = document.getElementById('termsAndConditions');
+var popup = document.getElementById('popup');
+var closePopupButton = document.getElementById('closePopup');
+
+termsAndConditionsLink.addEventListener('click', function(event) {
+  event.preventDefault();
+  popup.style.display = 'flex'; // Mostrar el popup al cambiar la propiedad 'display' a 'flex'
 });
 
-if (formatoEmailvalido) {
-    console.log(formato)
-} 
-else{
-    console.log(formato)
-    alert('Dominio nó valido')
-}
-
-
-
-var formato = "example@example.com";
-
-var pruebaFormato = dominios.some(function(elemento) {
-  return elemento.test(formato);
+closePopupButton.addEventListener('click', function() {
+  popup.style.display = 'none'; // Ocultar el popup al cambiar la propiedad 'display' a 'none'
 });
-
-console.log(pruebaFormato);
-
 
 
 
