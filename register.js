@@ -1,5 +1,6 @@
 var usuarios = []
-
+var prueba = 'susanahoria@gmail.com'
+var prueb2 = 'susanahoria@gmail.xxx'
 //**REGISTER**
 //1 - Seleccionnar elementos del formualrio de registro
 //Variables generales
@@ -11,73 +12,98 @@ var termsAndCondChek = document.getElementById('termsAndCondChek');
 var registerButton = document.getElementById('registerButton');
 var termsAndConditions = document.getElementById('termsAndConditions');
 //1 APELLIDO Y NOMBRE 
+
 //2 - EMAIL - Capturar info cuando se hace click
 registerButton.addEventListener('click', function(){
-    var termsAndCond = termsAndCondChek.checked
-    var userName = registerUserName.value;
-    var userLastName = registerUserLastName.value;
-    var userEmail = registerUserEmail.value;
-    var userPassword = registerUserPassword.value;
-    //2a - Validaciones de datos
-    var emailValido = validarFormatoEmail(userEmail)
-    var dominioValido = validarDominioEmail(userEmail, dominios)
-    //2b - Crear objeto usuarios para almacenar valores del input 
-    var usuario = {
-        name: userName,
-        lastName: userLastName,
-        email: userEmail,
-        password: userPassword,
-    }
-    console.log('llegue')
-    //2c - Dominio y formato valido true
-    if (emailValido && dominioValido) { 
-        //2d - check de acepto terminos y condiciones true
-        if (termsAndCond) {
-            //Guardar objeto "usuario" en array "usuarios"
-            console.log('Registro recibido')
-            usuarios.push(usuario)
-            //Simular envio de datos. Se guardan en el lcaol storage usuarios
-            //console.log('Datos guardados en Local Storage')
-            //localStorage.setItem('usuarios', JSON.stringify(usuarios));
-        }
-        else {
-            alert('Debe aceptar términos y condiciones')
-        } 
-    }
-    else {
-        alert('Formato de correo no válido')
-    }       
+  //2a - Crear objeto usuarios para almacenar valores del input  
+  var usuario = {name: userName, lastName: userLastName, email: userEmail, password: userPassword,}
+  var termsAndCond = termsAndCondChek.checked
+  var userName = registerUserName.value;
+  var userLastName = registerUserLastName.value;
+  var userEmail = registerUserEmail.value;
+  var userPassword = registerUserPassword.value;
+  var userConfirmPass = registerUserConfirmPass.value; 
+  //2b - Validaciones de datos
+  var formatoNameValido = validarFormatoNombre(userName);
+  var formatoLastNameValido = validarFormatoApellido(userLastName)
+  var formatoEmailValido = validarFormatoEmail(userEmail);
+  var dominioEmailValido = validarDominioEmail(userEmail, dominios);
+  var formatoPassValido = validarFormatoPass(userPassword)
+
+  if (formatoNameValido === false || userName === '') {
+    alert('Por favor ingrese un Nombre válido')
+  }
+  else if (formatoLastNameValido === false || userLastName === '') {
+    alert('Por favor ingrese un Apellido válido')
+  }
+  else if (formatoEmailValido === false){
+    alert('Formato de email no válido')
+  }
+  else if (dominioEmailValido === false){
+    alert('Dominio de email no válido')
+  }
+  else if (formatoPassValido === false){
+    alert('Contraseña no válido')
+  }
+  
+  else if (userPassword !== userConfirmPass){
+    alert('Contraseña y Repita Contraseña deben coincidir')
+  }
+
+  else {
+    console.log('Datos válido')
+    if (termsAndCond) {
+        //Guardar objeto "usuario" en array "usuarios"
+        console.log('Registro recibido');
+        usuarios.push(usuario);
+        //Simular envio de datos. Se guardan en el local storage usuarios
+        //console.log('Datos guardados en Local Storage')
+        //localStorage.setItem('usuarios', JSON.stringify(usuarios));
+      }
+      else {
+        alert('Debe aceptar términos y condiciones');
+      } 
+  }         
 })
 
-//Validar el formato de email
-var valCorreo = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+//Métodos validar Nombre y Apellido 
+var regexNombreApellido = /^[a-zA-ZÀ-ÿ\s]{1,40}$/ 
 
-function validarFormatoEmail (dominio) {
-    return valCorreo.test(dominio)
+function validarFormatoNombre (nombre) {
+    return regexNombreApellido.test(nombre);    
 }
 
-//Validar el dominio de email
+function validarFormatoApellido (apellido) {
+    return regexNombreApellido.test(apellido);
+}
+
+//Método validar el formato del email
+var regexEmail = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+
+function validarFormatoEmail (dominio) {
+    return regexEmail.test(dominio);  
+}
+
+//Método validar el dominio de email
 var regexCom = /\.com$/;
 var regexOrg = /\.org$/;
 var regexNet = /\.net$/;
 var regexEdu = /\.edu$/;
 var regexGov = /\.gov$/;
 var regexMil = /\.mil$/;
-
-const dominios = [regexCom,regexOrg,regexNet,
-    regexEdu,regexGov,regexMil] 
+const dominios = [regexCom,regexOrg,regexNet,regexEdu,regexGov,regexMil] 
     
-function validarDominioEmail (dominio, lista) {
-    for (var i = 0; i < lista.length; i++) {
-      if (lista[i].test(dominio))  {
-        console.log("El dominio es válido: " + dominio);
-        break; // Terminar el bucle si se encuentra una coincidencia
-      } 
-      else {
-        console.log("El dominio no es válido: " + dominio);
-        return false;
-      }  
-    }  
+function validarDominioEmail (correo, lista) {
+    var formatoEmailvalido = dominios.some(function(elemento) {  
+        formatoEmailvalido =  elemento.test(correo);   
+        return formatoEmailvalido
+    });
+    return formatoEmailvalido
 }
 
-
+//Método validar el password de email
+var regexPass = /^.{7,20}$/;
+//var regexPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/ // Este lo vamos a usar más adelante
+function validarFormatoPass (pass) {
+    return regexPass.test(pass);  
+}
