@@ -558,16 +558,12 @@ div p:last-child{
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: repeat(4, 1fr);
-        margin-top: var(--spacing-24);  
+        margin-top: var(--spacing-16);  
     }
 
-    .form-min-max p {
-        font-size: var(--font-xsmall);
-    }
+    .form-min-max p {font-size: var(--font-xsmall);}
 
-    h5 {
-        font-size: var(--font-medium);
-    }
+    h5 {font-size: var(--font-medium);}
 
     .form-title1{
         grid-column: 1/4;
@@ -733,6 +729,10 @@ div p:last-child{
         padding-bottom: 0;
     }
     
+    article a {
+        padding: 0;
+    }
+    
     .grid-container-section-1 {
         margin: 0;
         grid-column: 1;
@@ -786,7 +786,8 @@ div p:last-child{
         font-size: var(--font-small);
         color:var(--grey-font-solid);
         font-weight: 400;
-        margin-bottom: var(--spacing-12);
+        margin: var(--spacing-8) 0;
+        text-align: justify ;
     }
 
     div p:first-child {
@@ -794,12 +795,14 @@ div p:last-child{
         font-size: var(--font-xsmall);
         font-weight: 400;
         color:var(--grey-font-solid);
-        margin-bottom: var(--spacing-12);
+        margin: var(--spacing-8) 0;
     }
 
     div h4 {
         font-size: var(--font-small);
-        margin-bottom: var(--spacing-12);
+        margin: var(--spacing-8) 0;
+        text-align: justify;
+
     }
 
     .grid-container-div {
