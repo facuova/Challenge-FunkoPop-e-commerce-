@@ -112,7 +112,7 @@ function validarFormatoPass (pass) {
     return regexPass.test(pass);  
 }
 
-//Método para ver términos y condiciones
+//Método para ver términos y condiciones en pop up
 var termsAndConditionsLink = document.getElementById('termsAndConditions');
 var popup = document.getElementById('popup');
 var closePopupButton = document.getElementById('closePopup');

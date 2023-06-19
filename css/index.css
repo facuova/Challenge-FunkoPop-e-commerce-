@@ -480,22 +480,23 @@ input[type=checkbox] {
   align-items: center;
 }
 
+/*Popup de terminos y condiciones*/
 .popup-content {
+  width: 80%;
   background-color: #fff;
   padding: 20px;
 }
 
 .popup h2 {
+  text-align: center;
   margin-top: 0;
 }
 
 .popup p {
+  font-size: var(--font-medium);
   margin-bottom: 20px;
 }
 
-.popup button {
-  padding: 10px 20px;
-}
 
 /*Item adn create*/
 

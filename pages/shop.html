@@ -18,7 +18,7 @@
             </picture>    
             <ul class="grid-container-barnav-ul">
                 <li class="grid-container-barnav-ul-item-1 with-submenu" >
-                    <a class="navbar-link with-icon" href="./pages/shop.html" >SHOP <iconify-icon icon="mdi:chevron-down"></iconify-icon></a>
+                    <a class="navbar-link with-icon" href="" >SHOP <iconify-icon icon="mdi:chevron-down"></iconify-icon></a>
                     <ul class="submenu">
                         <li class="submenu-item">
                             <a class="submenu-link" href="">FUNKOS</a>
@@ -51,26 +51,26 @@
         <nav class="container-form">
             <!--Los siguientes formularios "BUSCAR, ORDENAR POR y PRECIO" están organizados de esta manera para práctiar 
                 posicionamiento SIN grid-->
-            <h5>BUSCAR:</h5>
-            <form action="" method="GET">
-                <input type="text" name="buscar" placeholder=" Item o categoría">
+            <h5 class="form-title1">BUSCAR:</h5>
+            <form class="form-input-1" action="" method="GET">
+                <input type="text"  name="buscar" placeholder=" Item o categoría">
             </form>
-            <h5>ORDENAR POR:</h5>
-            <form action="" method="GET">  
-                <select name="ordenar por" id="ordenar por">
+            <h5 class="form-title2">ORDENAR POR:</h5>
+            <form class="form-input-2" action="" method="GET">  
+                <select  name="ordenar por" id="ordenar por">
                     <option value=""></option>
                     <option value="mayor a menor">Mayor a menor</option>
                     <option value="menor a mayor">Menor a mayor</option>
                     <option value="más buscados">Más buscados</option>
                 </select>    
             </form>
-            <h5>PRECIO</h5>
+            <h5 class="form-title3">PRECIO:</h5>
             <form class="form-min-max" action="" method="GET">
                 <p>MIN <input type="numbers" name="min" placeholder="0"> - MAX <input type="numbers" name="max" placeholder="0">
             </form>   
             <!--Este formulario está organizado (1ero inputs, 2do label) de esta manera para hacerlo encajar con grid.-->            
-            <form action="" method="GET" class="grid-container-form-filt">
-                <h5 class="grid-container-form-filt-titulo">FILTRAR</h5>  
+            <form action="" method="GET" class="grid-container-form-filt form-input-4">
+                <h5 class="grid-container-form-filt-titulo">FILTRAR:</h5>  
                 <input class="grid-container-form-filt-input-1" type="checkbox" name="filtro" id="filtro" value="nuevos">
                 <input class="grid-container-form-filt-input-2" type="checkbox" name="filtro" id="filtro" value="ofertas">
                 <input class="grid-container-form-filt-input-3" type="checkbox" name="filtro" id="filtro" value="edición especial">
@@ -86,13 +86,13 @@
         seguir haciendo más clases para que cada artículo quede bien encajado dentro de la grilla. Por ahora, lo 
         solucioné con padding. -->
         <section class="grid-container-section-1">
-            <article>
-                <a href="./pages/shop.html">
+            <article >
+                <a class="grid-article-responsive" href="./pages/shop.html">
                     <picture class="card-item-picture">
                         <img class="card-item-img-front" src="../img/star-wars/trooper-1.webp" alt="Figura coleccionable de Funko de Storm Tropper de Star Wars">
                         <img class="card-item-img-back" src="../img/star-wars/trooper-box.webp" alt="Figura coleccionable de caja de Funko de Storm Tropper de Star Wars">
                     </picture>
-                    <div>
+                    <div class="grid-article-div-responsive">
                         <p>STAR WARS</p>
                         <h4>STORMTROOPER LIGHTSABER</h4>
                         <p>$1799,99,-</p>
@@ -101,12 +101,12 @@
                 </a>
             </article>
             <article>
-                <a href="./pages/shop.html">
+                <a href="./pages/shop.html" class="grid-article-responsive">
                     <picture class="card-item-picture">
                         <img class="card-item-img-front" src="../img/star-wars/baby-yoda-1.webp" alt="Figura coleccionable de Funko de Baby Yoda de Star Wars">
                         <img class="card-item-img-back" src="../img/star-wars/baby-yoda-box.webp" alt="Caja de figura coleccionable de Funko de Baby Yoda de Star Wars">
                     </picture>
-                    <div>
+                    <div class="grid-article-div-responsive">
                         <p>STAR WARS</p>
                         <h4>BABY YODA</h4>
                         <p>$1799,99,-</p>
@@ -115,12 +115,12 @@
                 </a>
             </article>
             <article>
-                <a href="./pages/shop.html">
+                <a href="./pages/shop.html" class="grid-article-responsive">
                     <picture class="card-item-picture">
                         <img class="card-item-img-front" src="../img/star-wars/bobbafeth-1.webp" alt="Figura coleccionable de Funko de Bobafeth de Star Wars">
                         <img class="card-item-img-back" src="../img/star-wars/bobbafeth-box.webp" alt="Caja de figura coleccionable de Funko de Bobafeth de Star Wars">
                     </picture>
-                    <div>
+                    <div class="grid-article-div-responsive">
                         <p>STAR WARS</p>
                         <h4>BOBBAFETH</h4>
                         <p>$1799,99,-</p>
@@ -132,12 +132,12 @@
         <!--Esta es la 2da sección posicionada en la 3er columna de grid-container-main-->
         <section class="grid-container-section-2">
             <article>
-                <a href="C:\Users\Facu\Desktop\Python\Front end\CodoACodo\Challenge\pages\shop.html">
+                <a href="" class="grid-article-responsive">
                     <picture class="card-item-picture">
                         <img class="card-item-img-front" src="../img/pokemon/pidgeotto-1.webp" alt="Figura coleccionable de Funko de Pidgoetto de Pokemón">
                         <img class="card-item-img-back" src="../img/pokemon/pidgeotto-box.webp" alt="Figura coleccionable de caja de Funko de Pidgoetto de Pokemón">
                     </picture>
-                    <div>
+                    <div class="grid-article-div-responsive">
                         <p>POKEMÓN</p>
                         <h4>PIDGEOTTO</h4>
                         <p>$1799,99,-</p>
@@ -146,12 +146,12 @@
                 </a>
             </article>
             <article> 
-                <a href="C:\Users\Facu\Desktop\Python\Front end\CodoACodo\Challenge\pages\shop.html">
+                <a href="" class="grid-article-responsive">
                     <picture class="card-item-picture">
                         <img class="card-item-img-front" src="../img/pokemon/charmander-1.webp" alt="Figura coleccionable de Funko de Charmander de Pokemón">
                         <img class="card-item-img-back" src="../img/pokemon/charmander-box.webp" alt="Figura coleccionable de caja de Funko de Charmander de Pokemón">
                     </picture>
-                    <div>
+                    <div class="grid-article-div-responsive">
                         <p>POKEMÓN</p>
                         <h4>CHARMANDER</h4>
                         <p>$1799,99,-</p>
@@ -160,12 +160,12 @@
                 </a>
             </article>
             <article> 
-                <a href="C:\Users\Facu\Desktop\Python\Front end\CodoACodo\Challenge\pages\shop.html">
+                <a href="" class="grid-article-responsive">
                     <picture class="card-item-picture">
                         <img class="card-item-img-front" src="../img/pokemon/pikachu-1.webp"alt="Figura coleccionable de Funko de Pikachu  de Pokemón">
                         <img class="card-item-img-back" src="../img/pokemon/pikachu-box.webp" alt="Figura coleccionable de caja de Funko de Pikachu de Pokemón">
                     </picture>
-                    <div>
+                    <div class="grid-article-div-responsive">
                         <p>POKEMÓN</p>
                         <h4>PIKACHU</h4>
                         <p>$1799,99,-</p>
@@ -177,12 +177,12 @@
         <!--Esta es la 3era sección posicionada en la 4ta columna de grid-container-main-->
         <section class="grid-container-section-3">
             <article>
-                <a href="C:\Users\Facu\Desktop\Python\Front end\CodoACodo\Challenge\pages\shop.html">
+                <a href="" class="grid-article-responsive">
                     <picture class="card-item-picture">
                         <img class="card-item-img-front" src="../img/harry-potter/harry-1.webp" alt="Figura coleccionable de Funko de Harry de Harry Potter">
                         <img class="card-item-img-back" src="../img/harry-potter/harry-box.webp" alt="Figura coleccionable de caja de Funko de Harry de Harry Potter">
                     </picture>
-                    <div>
+                    <div class="grid-article-div-responsive">
                         <p>HARRY POTTER</p>
                         <h4>HARRY POTTER</h4>
                         <p>$1799,99,-</p>
@@ -191,12 +191,12 @@
                 </a>
             </article>
             <article>
-                <a href="C:\Users\Facu\Desktop\Python\Front end\CodoACodo\Challenge\pages\shop.html">
+                <a href=""class="grid-article-responsive">
                     <picture class="card-item-picture">
                         <img class="card-item-img-front" src="../img/harry-potter/hermione-1.webp" alt="Figura coleccionable de Funko de Hermione de Harry Potter">
                         <img class="card-item-img-back" src="../img/harry-potter/hermione-box.webp" alt="Figura coleccionable de caja de Funko de Hermione de Harry Potter">
                     </picture>
-                    <div>
+                    <div class="grid-article-div-responsive">
                         <p>HARRY POTTER</p>
                         <h4>HERMIONE</h4>
                         <p>$1799,99,-</p>
@@ -205,12 +205,12 @@
                 </a>
             </article>
             <article>
-                <a href="C:\Users\Facu\Desktop\Python\Front end\CodoACodo\Challenge\pages\shop.html">
+                <a href=""class="grid-article-responsive">
                     <picture class="card-item-picture">
                         <img class="card-item-img-front" src="../img/harry-potter/luna-1.webp" alt="Figura coleccionable de Funko Luna Lovegood con máscara de León de Harry Potter">
                         <img class="card-item-img-back" src="../img/harry-potter/luna-box.webp" alt="Caja de figura coleccionable de Funko Luna Lovegood con máscara de León de Harry Potter">
                     </picture>
-                    <div>
+                    <div class="grid-article-div-responsive">
                         <p>HARRY POTTER</p>
                         <h4>LUNA LOVEGOOD LION MASK</h4>
                         <p>$1799,99,-</p>
