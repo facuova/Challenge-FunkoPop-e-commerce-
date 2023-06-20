@@ -65,7 +65,7 @@ function validarData(email, password) {
   }
 
   else if (email !== usuarios[0].email & password === usuarios[0].password || 
-    email === usuarios[0].email & password !== usuarios[0].password ) {
+    email === usuarios[0].email & password !== usuarios[0].password || email !== usuarios[0].email & password !== usuarios[0].password) {
     alert('Email o password inválidos.');
     return false;  
   }
