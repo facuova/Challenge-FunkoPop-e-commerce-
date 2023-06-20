@@ -824,3 +824,11 @@ select {
     text-align: center;
   }
 }
+
+.error-message {
+  color: var(--primary-solid);
+  font-size: var(--font-small);
+  text-align: center;
+  font-weight: 700;
+  
+}
