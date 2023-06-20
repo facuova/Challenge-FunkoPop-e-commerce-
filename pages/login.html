@@ -25,11 +25,11 @@
         <section class="login-container container">
             <h2>INGRESAR A MI CUENTA</h2>   
             <div class="login-form-container">   
-                <form class="login-form" action="index.js" method="GET">
+                <form class="login-form" action="index.js" id="userEmailForm" method="GET">
                     <label class="login-form-label" for="userEmailInput">Email:</label>
-                    <input type="text" name="user" id="userEmailInput" placeholder="ejemplo@correo.com">
+                    <input type="text" name="user" id="userEmailInput" placeholder="ejemplo@correo.com">  
                 </form>
-                <form class="login-form"  action="index.js">
+                <form class="login-form"  action="index.js" id="userPassForm">
                     <label class="login-form-label" for="userPasswordlInput">Contraseña:</label>
                     <input type="text" name="user" id="userPasswordlInput" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
                 </form>
@@ -38,7 +38,7 @@
                 <button class="login-buttom-item" id="loginButton">Ingresar</button>
                 <form action="index.js" type="GET">
                     <input type="checkbox" name="recordarme" id="remindMe">
-                    <label for="">Recordarme</label>
+                    <label for="remindMe">Recordarme</label>
                 </form>
             </div>
             <a href="" id="forgotPassword">Olvidé mi contraseña</a>
