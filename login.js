@@ -11,6 +11,7 @@ usuarios = [
 //**LOGIN**   
 //1 - Seleccionnar elementos
 let userEmailForm = document.getElementById('userEmailForm');
+let userPassForm = document.getElementById('userPassForm');
 let emailInput = document.getElementById('userEmailInput');
 let passwordInput = document.getElementById('userPasswordlInput');
 let loginButton = document.getElementById('loginButton');
@@ -58,7 +59,6 @@ function validarData(email, password) {
       passError.id = 'passError';
       passError.className = 'error-message';
       passError.innerHTML = 'Campo vacío. Por favor, ingrese password.';
-      var userPassForm = document.getElementById('userPassForm');
       userPassForm.parentNode.appendChild(passError);
     }
     return false;
@@ -66,7 +66,15 @@ function validarData(email, password) {
 
   else if (email !== usuarios[0].email & password === usuarios[0].password || 
     email === usuarios[0].email & password !== usuarios[0].password || email !== usuarios[0].email & password !== usuarios[0].password) {
-    alert('Email o password inválidos.');
+    var credentialError = document.getElementById('passError');
+      if (!passError) {
+      var credentialError = document.createElement('span');
+      credentialError.id = 'credentialError';
+      credentialError.className = 'error-message';
+      credentialError.innerHTML = 'Combinación de Email o contraseñas inválidas.';
+      var userPassForm = document.getElementById('userPassForm');
+      userPassForm.parentNode.appendChild(credentialError);
+    }
     return false;  
   }
   // Los campos son válidos
@@ -80,10 +88,18 @@ function validarData(email, password) {
   } 
 }
 
-//4- Boton de restablecer contraseña - hacer un prompt para que el usuario pueda cargar su email
-forgotPassword.addEventListener('click', () => {
-  prompt('Ingresar correo registrado para recibir código de autenticación')
-})
+//4- Boton de restablecer contraseña 
+var popup = document.getElementById('popup');
+var closePopupButton = document.getElementById('closePopup');
+
+forgotPassword.addEventListener('click', function(event) {
+  event.preventDefault();
+  popup.style.display = 'flex'; // Mostrar el popup al cambiar la propiedad 'display' a 'flex'
+});
+
+closePopupButton.addEventListener('click', function() {
+  popup.style.display = 'none'; // Ocultar el popup al cambiar la propiedad 'display' a 'none'
+});
 
 //Borrado de mensaje de error cuando se hace click nuevamente en el formulario
 //Este es del email
@@ -98,5 +114,20 @@ userPassForm.addEventListener('click', function() {
   var passError = document.getElementById('passError');
   if (passError) {
     passError.remove();
+  }
+});
+
+//Este es de credenciales
+userEmailForm.addEventListener('click', function() {
+  var credentialError = document.getElementById('credentialError');
+  if (credentialError) {
+    credentialError.remove();
+  }
+});
+
+userPassForm.addEventListener('click', function() {
+  var credentialError = document.getElementById('credentialError');
+  if (credentialError) {
+    credentialError.remove();
   }
 });
