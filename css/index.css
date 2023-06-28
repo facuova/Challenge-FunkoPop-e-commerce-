@@ -4,113 +4,113 @@ la familia de fuentes*/
 /*Luego migramos el diseño desde figma creando variables para utilizarlas. Esto agiliza el trabajo*/
 
 :root{
-    /*Colores*/
-    --primary-solid: #FF3333;
-    --primary-900: rgba(255, 51, 51, 0.9);
-    --primary-500: rgba(255, 51, 51, 0.5);
-    --primary-300: rgba(255, 51, 51, 0.3);
+  /*Colores*/
+  --primary-solid: #FF3333;
+  --primary-900: rgba(255, 51, 51, 0.9);
+  --primary-500: rgba(255, 51, 51, 0.5);
+  --primary-300: rgba(255, 51, 51, 0.3);
 
-    --secondary-solid: #1D84B5;
-    --secondary-900: rgba(29, 132, 181, 0.9);
-    --secondary-500: rgba(29, 132, 181, 0.5);
-    --secondary-300: rgba(29, 132, 181, 0.3);
+  --secondary-solid: #1D84B5;
+  --secondary-900: rgba(29, 132, 181, 0.9);
+  --secondary-500: rgba(29, 132, 181, 0.5);
+  --secondary-300: rgba(29, 132, 181, 0.3);
 
-    --dark-solid: #1F1F1F;
-    --dark-900: rgba(31, 31, 31 0.9);
-    --dark-500: rgba(31, 31, 31 0.5);
-    --dark-300: rgba(31, 31, 31 0.3);
+  --dark-solid: #1F1F1F;
+  --dark-900: rgba(31, 31, 31 0.9);
+  --dark-500: rgba(31, 31, 31 0.5);
+  --dark-300: rgba(31, 31, 31 0.3);
 
-    --dark-bg-solid: #30343F;
-    --light-bg-solid: #FAFAFF;
-    --light-font-solid: #FFFFFF;
-    --grey-font-solid: #4F4F4F;
-    --grey-light-ph-solid: #bdbdbddc;
+  --dark-bg-solid: #30343F;
+  --light-bg-solid: #FAFAFF;
+  --light-font-solid: #FFFFFF;
+  --grey-font-solid: #4F4F4F;
+  --grey-light-ph-solid: #bdbdbddc;
 
-    /*Tipografía*/
-    --base-font: 'Inter', sans-serif;
-    --alternative-font: 'Raleway', sans-serif;
+  /*Tipografía*/
+  --base-font: 'Inter', sans-serif;
+  --alternative-font: 'Raleway', sans-serif;
 
-    /*Tamaño de fuente*/
-    --font-display: 4.6em;
-    --font-jumbo: 3.8em;
-    --font-xlarge: 3em;
-    --font-large: 2.4em;
-    --font-intermediate:2em;
-    --font-medium: 1.8em;
-    --font-small: 1.6em;
-    --font-xsmall: 1.2em;
+  /*Tamaño de fuente*/
+  --font-display: 4.6em;
+  --font-jumbo: 3.8em;
+  --font-xlarge: 3em;
+  --font-large: 2.4em;
+  --font-intermediate:2em;
+  --font-medium: 1.8em;
+  --font-small: 1.6em;
+  --font-xsmall: 1.2em;
 
-    /*Espacios*/
-    --spacing-291: 29.1rem;
-    --spacing-128: 12.8rem;
-    --spacing-68: 6.8rem;
-    --spacing-36: 3.6rem;
-    --spacing-28: 2.8rem;
-    --spacing-24:2.4rem;
-    --spacing-20: 2rem;
-    --spacing-16: 1.6rem;
-    --spacing-12: 1.2rem;
-    --spacing-8: 0.8rem;
+  /*Espacios*/
+  --spacing-291: 29.1rem;
+  --spacing-128: 12.8rem;
+  --spacing-68: 6.8rem;
+  --spacing-36: 3.6rem;
+  --spacing-28: 2.8rem;
+  --spacing-24:2.4rem;
+  --spacing-20: 2rem;
+  --spacing-16: 1.6rem;
+  --spacing-12: 1.2rem;
+  --spacing-8: 0.8rem;
 }
 
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-family: var(--base-font);
-    font-size: 62.5%; /*  medida(16px = 1em) calculo(16px*0.625 = 10px)*/
-    color: var(--dark-solid);
+  font-family: var(--base-font);
+  font-size: 62.5%; /*  medida(16px = 1em) calculo(16px*0.625 = 10px)*/
+  color: var(--dark-solid);
 }
 
 a {
-    font-family: inherit;
-    text-decoration: none;
-    color: inherit;
-    padding: 10px;
+  font-family: inherit;
+  text-decoration: none;
+  color: inherit;
+  padding: 10px;
 }
 
 header,
 footer {
-    font-family: var(--alternative-font); 
-    font-size: var(--font-intermediate);
-    color: var(--light-font-solid);
-    background-color: var(--dark-bg-solid);
+  font-family: var(--alternative-font); 
+  font-size: var(--font-intermediate);
+  color: var(--light-font-solid);
+  background-color: var(--dark-bg-solid);
 }
 
 header nav{
-    padding-top: var(--spacing-28);
-    padding-bottom: var(--spacing-28);
+  padding-top: var(--spacing-28);
+  padding-bottom: var(--spacing-28);
 }
 
 ul, ol {list-style-type: none}
 
 h3 {
-    font-family: var(--alternative-font);
-    font-size: var(--font-display);
-    font-weight: 500;
+  font-family: var(--alternative-font);
+  font-size: var(--font-display);
+  font-weight: 500;
 }
 
 p {
-    font-family: var(--alternative-font);
-    font-size: var(--font-large);
-    font-weight: 400;
-    color:var(--grey-font-solid);
+  font-family: var(--alternative-font);
+  font-size: var(--font-large);
+  font-weight: 400;
+  color:var(--grey-font-solid);
 }
 
 h2 {
-    font-family: var(--alternative-font);
-    font-size: var(--font-display);
-    font-weight: 700;
+  font-family: var(--alternative-font);
+  font-size: var(--font-display);
+  font-weight: 700;
 }
 
 footer nav {
-    padding-top: var(--spacing-68);
-    padding-bottom: var(--spacing-68);
+  padding-top: var(--spacing-68);
+  padding-bottom: var(--spacing-68);
 }
 
 main img {width: 100%}
@@ -120,124 +120,124 @@ Luego para ir entrando a cada etiqueta voy a usar la ".clase etiqueta {}" para a
 y darle el formato deseado*/
 
 .container {
-    max-width: 120rem;
-    margin: 0 auto;
+  max-width: 120rem;
+  margin: 0 auto;
 }
 
 .nav-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
  /*Header*/
 .navbar-list {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: var(--spacing-20);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--spacing-20);
 }
 
 .navbar-link {
-    padding: var(--spacing-8) var(--spacing-16);
-    display: inline-block;
-    transition: background .3s ease-in-out;
-    position: relative;
+  padding: var(--spacing-8) var(--spacing-16);
+  display: inline-block;
+  transition: background .3s ease-in-out;
+  position: relative;
 }
 
 .navbar-link:hover {
-    background-color: var(--primary-900);
+  background-color: var(--primary-900);
 }
 
 .with-icon {
-    display: flex;
-    align-items: center;
-    gap:var(--spacing-8);
+  display: flex;
+  align-items: center;
+  gap:var(--spacing-8);
 }
 
 .with-submenu:hover .submenu {
-    display:block;
+  display:block;
 }
 
 .submenu {
-    display:none;
-    width: 300px;
-    position:absolute;
-    background-color: var(--dark-bg-solid);
-    z-index: 1;
+  display:none;
+  width: 300px;
+  position:absolute;
+  background-color: var(--dark-bg-solid);
+  z-index: 1;
 }
 
 .submenu-item {
-    display:block;
-    padding: var(--spacing-8) var(--spacing-16);
+  display:block;
+  padding: var(--spacing-8) var(--spacing-16);
 }
 
 .submenu-link {
-    display:block;
-    font-size: medium;
-    transition: background .3s ease-in-out;
+  display:block;
+  font-size: medium;
+  transition: background .3s ease-in-out;
 }
 
 .submenu-link:hover {
-    background-color: var(--primary-900);
+  background-color: var(--primary-900);
 }
 
 /*banner*/
 .banner {    
-    background-image: url(../img/funkos-banner.webp);
-    background-size:cover;
-    padding-top: var(--spacing-128);
-    padding-bottom: var(--spacing-128);
-    background-attachment: fixed;
-    position:relative;
+  background-image: url(../img/funkos-banner.webp);
+  background-size:cover;
+  padding-top: var(--spacing-128);
+  padding-bottom: var(--spacing-128);
+  background-attachment: fixed;
+  position:relative;
 }
 
 .banner::before {
-    content:"";
-    background-color: rgba(0,0,0,0);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    backdrop-filter: blur(2px) brightness(.9);
+  content:"";
+  background-color: rgba(0,0,0,0);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(2px) brightness(.9);
 }
 
 .banner-container {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap:var(--spacing-20);
-    z-index: 2;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap:var(--spacing-20);
+  z-index: 2;
+  position: relative;
 }
 
 .banner-title {
-    font-size: var(--font-jumbo);
-    color: var(--light-font-solid);  
+  font-size: var(--font-jumbo);
+  color: var(--light-font-solid);  
 }
 
 .banner-text {
-    font-size: var(--font-medium);
-    color: var(--light-font-solid);  
+  font-size: var(--font-medium);
+  color: var(--light-font-solid);  
 }
 
 .banner-link {
-    display:inline-block;
-    font-size: var(--font-medium);
-    font-family: var(--alternative-font);
-    font-weight: 500;
-    color:var(--dark-solid);
-    background-color: var(--light-bg-solid);
-    border-radius: 30px;
-    padding: var(--spacing-12) var(--spacing-68); 
-    margin-top: var(--spacing-24);
-    transition: all .3s ease-in-out;     
+  display:inline-block;
+  font-size: var(--font-medium);
+  font-family: var(--alternative-font);
+  font-weight: 500;
+  color:var(--dark-solid);
+  background-color: var(--light-bg-solid);
+  border-radius: 30px;
+  padding: var(--spacing-12) var(--spacing-68); 
+  margin-top: var(--spacing-24);
+  transition: all .3s ease-in-out;     
 }
 
 .banner-link:hover {
-    background-color: var(--primary-900);
-    color: var(--light-bg-solid);
+  background-color: var(--primary-900);
+  color: var(--light-bg-solid);
 }
 /*Collection*/
 .collection {
@@ -245,221 +245,233 @@ y darle el formato deseado*/
 }
 
 .main-container {
-    display: flex;
-    flex-direction: column;
-    gap:var(--spacing-16);
-    margin: var(--spacing-36) 0 ;
+  display: flex;
+  flex-direction: column;
+  gap:var(--spacing-16);
+  margin: var(--spacing-36) 0 ;
 }
 
 .collection:nth-child(2) .prueba{
-    order: -1;    
+  order: -1;    
 }
 
 .collection-article {
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    gap:var(--spacing-24);
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  gap:var(--spacing-24);
 }
 
 .collection-article-text {
-    display: inline-block;
-    border-bottom: solid var(--primary-900);
-    padding-bottom: var(--spacing-20);    
+  display: inline-block;
+  border-bottom: solid var(--primary-900);
+  padding-bottom: var(--spacing-20);    
 }
 
 .collection-article-link {
-    display: inline-block;
-    align-self: start;
-    font-size: var(--font-large);
-    background-color: var(--dark-bg-solid);
-    color:var(--light-font-solid);
-    font-weight:bold;
-    border-radius: 50px;
-    margin-top:var(--spacing-28) ;
-    padding: var(--spacing-12) var(--spacing-36);
-    transition: background .3s ease-in-out;
+  display: inline-block;
+  align-self: start;
+  font-size: var(--font-large);
+  background-color: var(--dark-bg-solid);
+  color:var(--light-font-solid);
+  font-weight:bold;
+  border-radius: 50px;
+  margin-top:var(--spacing-28) ;
+  padding: var(--spacing-12) var(--spacing-36);
+  transition: background .3s ease-in-out;
 }
 
 .collection-article-link:hover {
-    background-color: var(--primary-900);
+  background-color: var(--primary-900);
 }
 
 .slider {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap:var(--spacing-16);
+  display: flex;
+  flex-direction: column;
+  gap:var(--spacing-16);
 }
 
 .slider-items {
-    display:flex;  
-    gap: var(--spacing-24)
+  display:flex;  
+  gap: var(--spacing-24)
+}
+
+iconify-icon {
+  color: var(--dark-bg-solid);
+  font-size: var(--font-small);
+  font-weight: 700;
+}
+
+.glide__arrow--left{
+  left: 0;
+}
+
+.glide__arrow--right{
+  right:0
 }
 
 .card-item {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .card-item-div  {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--spacing-12);
-    padding: var(--spacing-16);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-12);
+  padding: var(--spacing-16);
 }
 
 .card-item-div-text{
-    font-size: var(--font-small);
-    font-weight: 500;
-    color:var(--grey-font-solid);
+  font-size: var(--font-small);
+  font-weight: 500;
+  color:var(--grey-font-solid);
 }
 
 .card-item-div-title {
-    font-family: var(--alternative-font);
-    font-size: var(--font-medium);
-    font-weight: 700;
+  font-family: var(--alternative-font);
+  font-size: var(--font-medium);
+  font-weight: 700;
 }
 
 .card-item-div-price {
-    font-size: var(--font-medium);
-    font-weight: 400;
-    color:var(--grey-font-solid);
+  font-size: var(--font-medium);
+  font-weight: 400;
+  color:var(--grey-font-solid);
 }
 
 .card-item-div-offers {
-    font-size: var(--font-xsmall);
-    color:var(--secondary-900);
-    font-weight: bold;   
+  font-size: var(--font-xsmall);
+  color:var(--secondary-900);
+  font-weight: bold;   
 }
 
 .card-item-picture {
-    display: flex;
-    position: relative;
+  display: flex;
+  position: relative;
 }
 
 .card-item-picture img{
-    animation: fade .7s;
+  animation: fade .7s;
 }
 
 .card-item-tag {
-    font-size: var(--font-xsmall);
-    font-weight: 800;
-    text-transform: uppercase;
-    background-color: var(--primary-solid);
-    color: var(--light-font-solid);
-    padding: var(--spacing-8) var(--spacing-12);
-    position: absolute;
-    right: 0;
+  font-size: var(--font-xsmall);
+  font-weight: 800;
+  text-transform: uppercase;
+  background-color: var(--primary-solid);
+  color: var(--light-font-solid);
+  padding: var(--spacing-8) var(--spacing-12);
+  position: absolute;
+  right: 0;
 }
 
 .card-item-img-back {
-    display:none;
+  display:none;
 }
 
 .card-item-picture:hover .card-item-img-back {
-    display:block;
+  display:block;
 }
 
 .card-item-picture:hover .card-item-img-front {
-    display:none;
+  display:none;
 }
 
 @keyframes fade {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
 }
 
 .footer-logo{
-    align-self: flex-end;
+  align-self: flex-end;
 }
 
 .footer-copy {
-    font-size: var(--spacing-20);
-    color:var(--light-bg-solid);
-    text-align: center;
-    padding-bottom:var(--spacing-16);
+  font-size: var(--spacing-20);
+  color:var(--light-bg-solid);
+  text-align: center;
+  padding-bottom:var(--spacing-16);
 }
 
 /*Page login and register*/ 
 
 .login-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap:var(--spacing-28);
-    padding: var(--spacing-36) 0;
-    background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:var(--spacing-28);
+  padding: var(--spacing-36) 0;
+  background-size: cover;
 }
 
 .login-form-container{
-    display: flex;
-    flex-direction: column;
-    gap:var(--spacing-28);
+  display: flex;
+  flex-direction: column;
+  gap:var(--spacing-28);
 }
 .login-form {
-    display: flex;
-    justify-content: space-between;
-    gap: var(--spacing-20);
-    margin-bottom: var(--spacing-12);
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-20);
+  margin-bottom: var(--spacing-12);
 }
 
 .login-form-label {
-    font-family: var(--base-font);
-    font-size: var(--font-large);
-    font-weight: 800;
+  font-family: var(--base-font);
+  font-size: var(--font-large);
+  font-weight: 800;
 }
 
 input[type=text] {
-    border: 2px solid var(--light-bg-solid);
-    border-bottom: 2px solid var(--primary-900);
+  border: 2px solid var(--light-bg-solid);
+  border-bottom: 2px solid var(--primary-900);
 }
 
 input[type=text]:focus {
-    outline: none;
-    border-bottom: 2px solid var(--primary-900);
+  outline: none;
+  border-bottom: 2px solid var(--primary-900);
 }
 
 input[type=text]::placeholder {
-    font-style: italic;
-    color: var(--grey-light-ph-solid) ;
+  font-style: italic;
+  color: var(--grey-light-ph-solid) ;
 }
 
 .login-buttom-container {
-    display: flex;
-    gap: var(--spacing-20);
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  gap: var(--spacing-20);
+  justify-content: center;
+  align-items: center;
 }
 
 .login-buttom-item {
-    font-size: var(--font-small);
-    color:var(--light-font-solid);
-    background-color: var(--primary-solid);
-    padding: var(--spacing-12) var(--spacing-28);
-    transition: background .3s ease-in-out;
-    border: 1px solid var(--light-font-solid);
+  font-size: var(--font-small);
+  color:var(--light-font-solid);
+  background-color: var(--primary-solid);
+  padding: var(--spacing-12) var(--spacing-28);
+  transition: background .3s ease-in-out;
+  border: 1px solid var(--light-font-solid);
 }
 
 .login-buttom-item:hover {
-    background-color: var(--primary-300);
+  background-color: var(--primary-300);
 }
 
 input[type=checkbox] {
-    transform: scale(1.3);    
+  transform: scale(1.3);    
 }
 
 .login-buttom-container label{
-    font-size: var(--font-small);
-    font-weight: 800;
-    margin-left: var(--spacing-12);
+  font-size: var(--font-small);
+  font-weight: 800;
+  margin-left: var(--spacing-12);
 }
 
 .login-container a{
