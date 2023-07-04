@@ -418,7 +418,7 @@ iconify-icon {
 }
 .login-form {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: var(--spacing-20);
   margin-bottom: var(--spacing-12);
 }
