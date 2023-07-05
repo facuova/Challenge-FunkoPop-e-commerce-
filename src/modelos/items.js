@@ -1,4 +1,4 @@
-const { conn } = require(`./connexion.js`)
+const { conn } = require(`../config/connexion.js`)
 
 const getItems = async () => {
 	try {

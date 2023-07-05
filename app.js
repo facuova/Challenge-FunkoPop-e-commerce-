@@ -1,18 +1,43 @@
-const express = require('express');
+const express = require(`express`)
+/*Para esto utilizaremos una dependencia llamada method-override, 
+otro middleware que captura la petición y si posee una mención a 
+algún método no soportado, lo sobreescribe.*/
+const method = require(`method-override`)
+const rutas = require(`./src/rutas/rutas.js`)
+const path = require('path')
+//Middleware env
+require(`dotenv`).config()
 
-const app = express();
+const port =  process.env.PORT;
+const server = express()
 
-const port = 3000;
+server.use(express.static(`public`)) // <-'/' index.html
 
-app.use(express.static('public'));
-app.use(`/`, rutas)
+/*Usando los middlewares nativos .urlencoded() y .json() podemos convertir 
+la data de estos formatos a uno que el servidor pueda manejar.*/
+server.use(express.urlencoded())
+server.use(express.json())
 
-app.listen(port, () => {
-  console.log(`Exmaple app listening at http://localhost:${port}`);
-});
+server.use(method(`_metodo`))
 
+//indicamos en nuestro entry point que usaremos un motor de plantillas y donde alojaremos los templates:
+server.set('view engine', 'ejs');
+server.set('views', path.join(__dirname, './src/vistas'))
 
+/*llamamos nuestro archivo de rutas desde app.js y a través del middleware 
+app.use() indicamos que peticiones deben ser respondidas con esas rutas*/
+server.use(`/`, rutas) // '/etc' ejecuta rutas
 
+// Middleware para manejar el error 404 
+server.use((req,res) => res.status(404).send(`Recurso no encontrado`))
+
+server.listen(port, () => console.log(`Estoy funcionando en localhost:${port}`))
+
+/*const server = http.createServer((req, res) => {
+	const file = fs.readFileSync(__dirname + `/machete.html`) //`${__dirname}/machete.html`
+	res.writeHead(200, {'Content-Type': 'text/html; charset=UTF-8'})
+	res.end(file)
+})*/
 
 
 
