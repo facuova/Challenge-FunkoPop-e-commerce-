@@ -5,6 +5,7 @@ algún método no soportado, lo sobreescribe.*/
 const method = require(`method-override`)
 const rutas = require(`./src/rutas/rutas.js`)
 const path = require('path')
+const ejs = require('ejs');
 //Middleware env
 require(`dotenv`).config()
 

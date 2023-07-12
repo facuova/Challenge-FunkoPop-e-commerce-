@@ -3,6 +3,7 @@ const { conn } = require(`../config/connexion.js`)
 const getItems = async () => {
 	try {
 		const [rows] = await conn.query(`SELECT * FROM product;`)
+		console.log(rows)
 		return rows
 	} catch(error) {
 		throw error

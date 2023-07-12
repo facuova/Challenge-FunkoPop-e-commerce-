@@ -22,7 +22,7 @@ const upload = multer({storage})
 rutas.get(`/`, controlador.home)
 rutas.get(`/contact`, controlador.contact)
 rutas.get(`/about`, controlador.about)
-//router.get(`/shop`, controlador.shop)
+rutas.get(`/shop`, controlador.shop)
 rutas.get(`/create`, controlador.create)
 rutas.post(`/create`, crearItem, validate, upload.array('images', 2), controlador.created)
 
