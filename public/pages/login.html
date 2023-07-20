@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="/css/index.css">
     <title>Login</title>
     
     
 </head>
-
 <body>
     <header> 
         <nav class="nav-container container">
@@ -27,11 +26,11 @@
             <div class="login-form-container">   
                 <form class="login-form" action="index.js" id="userEmailForm" method="GET">
                     <label class="login-form-label" for="userEmailInput">Email:</label>
-                    <input type="text" name="user" id="userEmailInput" placeholder="ejemplo@correo.com">  
+                    <input class="login-form-input" type="text" name="user" id="userEmailInput" placeholder="ejemplo@correo.com">  
                 </form>
                 <form class="login-form"  action="index.js" id="userPassForm">
                     <label class="login-form-label" for="userPasswordlInput">Contraseña:</label>
-                    <input type="text" name="user" id="userPasswordlInput" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
+                    <input class="login-form-input" type="text" name="user" id="userPasswordlInput" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
                 </form>
             </div> 
             <div class="login-buttom-container">
@@ -42,7 +41,7 @@
                 </form>
             </div>
             <a href="" id="forgotPassword">Olvidé mi contraseña</a>
-            
+            <!--Pop up de Restablecer password-->
             <div id="popup" class="popup">
                 <div class="popup-content">
                     <h3>Restablecer la constraseña:</h3>
@@ -82,6 +81,6 @@
         </nav>
         <p class="footer-copy">All rights reserved 2023 - Funkoshop &copy;</p>
     </footer>
-    <script src="/login.js"></script>
+    <script src="../js/login.js"></script>
 </body>
 </html>

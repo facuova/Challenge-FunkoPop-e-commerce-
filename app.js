@@ -4,6 +4,8 @@ otro middleware que captura la petición y si posee una mención a
 algún método no soportado, lo sobreescribe.*/
 const method = require(`method-override`)
 const rutas = require(`./src/rutas/rutas.js`)
+const rutasShop = require(`./src/rutas/rutasShop.js`)
+const rutasAdmin = require(`./src/rutas/rutasAdmin.js`)
 const path = require('path')
 const ejs = require('ejs');
 //Middleware env
@@ -26,9 +28,10 @@ server.set('view engine', 'ejs');
 server.set('views', path.join(__dirname, './src/vistas'))
 
 /*llamamos nuestro archivo de rutas desde app.js y a través del middleware 
-app.use() indicamos que peticiones deben ser respondidas con esas rutas*/
+server.use() indicamos que peticiones deben ser respondidas con esas rutas*/
 server.use(`/`, rutas) // '/etc' ejecuta rutas
-
+server.use(`/shop`, rutasShop)
+server.use(`/admin`, rutasAdmin)
 // Middleware para manejar el error 404 
 server.use((req,res) => res.status(404).send(`Recurso no encontrado`))
 

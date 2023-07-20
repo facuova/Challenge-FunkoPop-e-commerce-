@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
+    <title><%= item[0].product_name%></title>
+    
+</head>
+
+<body>
+    <header> 
+        <nav class="container nav-container">
+            <picture>
+                <a href="/" >
+                    <img  src="/img/branding/logo_light_horizontal.svg" alt="Icono de FunkoShop">
+                </a>
+            </picture>    
+            <ul class="navbar-list">
+                <li class="with-submenu" >
+                    <a class="navbar-link with-icon" href="/shop" >SHOP <iconify-icon icon="mdi:chevron-down"></iconify-icon></a>
+                    <ul class="submenu">
+                        <li class="submenu-item">
+                            <a class="submenu-link" href="">FUNKOS</a>
+                        </li>
+                        <li class="submenu-item">
+                            <a class="submenu-link" href="">REMERAS</a>
+                        </li>
+                        <li class="submenu-item">
+                            <a class="submenu-link" href="">LLAVEROS</a>
+                        </li>
+                    </ul>
+                </li>
+                <li >
+                   <a class="navbar-link" href="/contacto">CONTACTO</a>
+                </li>
+                <li>
+                    <a class="navbar-link" href="/login">INGRESAR</a>
+                </li>
+                <li >
+                    <a href="">
+                        <img src="/img/icons/cart-icon.svg"  alt="Ícono de carrito">
+                    </a>
+                </li>     
+            </ul>
+        </nav>        
+    </header>
+
+    <main class="main-container" >        
+        <section class="item-container container">
+            <picture class="card-item-picture"> 
+                <img class="card-item-img-front" src="../../img<%= item[0].image_front %>" id="img-primary" alt="<%= item.product_description %>">   
+                <img class="card-item-img-back" src="../../img<%= item[0].image_back %>" alt="<%= item.product_description %>">
+            </picture>
+            <article class="item-article">
+                <p><%= item[0].licence_name %></p>
+                <h3 class="item-article-title "><%= item[0].product_name%></h3>
+                <p ><%= item[0].product_description %></p>
+                <h3  class="item-article-price"><%= item[0].price%></h3>  
+                <form class="item-article-div-container" action="#" method="POST" enctype="application/x-www-form-urlencoded">
+                    <button id="subtract" class="item-article-div-button" type="button">-</button>
+                    <input class="item-article-div-input" type="text" name="cantidad" id="cantidad" placeholder="0">
+                    <button id="plus" class="item-article-div-button" type="button">+</button>
+                    <button class="login-buttom-item" type="submit" >Agregar al carrito</button>
+                </form>
+                <a href="" class="item-article-offers"><u>Ver métodos de pago</u> - <%= item[0].dues %> COUTAS SIN INTERÉS</a>
+            </article>   
+        </section>
+
+        <section class="slider container glide">
+            <h2>PRODUCTOS RELACIONADOS:</h2>
+            <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                      
+                        <li class="glide__slide">
+                            <article  class="card-item">
+                                <a href="">
+                                    <picture class="card-item-picture">
+                                        <span class="card-item-tag">Nuevo</span>
+                                        <img class="card-item-img-front" src="" alt="Figura coleccionable de Funko de Storm Tropper de Star Wars">
+                                        <img class="card-item-img-back" src="" alt="Caja de figura coleccionable de Funko de Storm Tropper de Star Wars">
+                                    </picture>
+                                    <div class="card-item-div">
+                                        <p class="card-item-div-text">STAR WARS</p>
+                                        <h4 class="card-item-div-title"></h4>
+                                        <p class="card-item-div-price"></p>
+                                        <p class="card-item-div-offers">3 COUTAS SIN INTERÉS</p>
+                                    </div>
+                                </a>
+                            </article>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="glide__arrows" data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><iconify-icon icon="tabler:chevron-left"></iconify-icon></button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><iconify-icon icon="tabler:chevron-right"></iconify-icon></button>
+            </div>
+        </section>
+    </main>
+
+    <footer >
+        <nav class="nav-container footer-container container">
+            <ul>
+                <li>
+                    <a class="navbar-link" href="/shop">SHOP</a>
+                </li>
+                <li>
+                    <a class="navbar-link" href="/register">REGISTRARSE</a>
+                </li>
+                <li>
+                    <a class="navbar-link" href="/login">INGRESAR</a>
+                </li>
+                <li>
+                    <a class="navbar-link" href="/contacto">CONTACTO</a>
+                </li>
+            </ul>
+            <picture class="footer-logo">
+                <a href="/">
+                    <img src="/img/branding/isotype.svg" alt="">
+                </a>
+            </picture>
+        </nav>
+        <p class="footer-copy">All rights reserved 2023 - Funkoshop &copy;</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script src="/js/slider.js"></script>
+    <script src="/js/itemCount.js"></script>
+
+</body>
+</html>

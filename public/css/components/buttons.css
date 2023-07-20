@@ -1,0 +1,12 @@
+.login-buttom-item {
+    font-size: var(--font-small);
+    color:var(--light-font-solid);
+    background-color: var(--primary-solid);
+    padding: var(--spacing-12) var(--spacing-28);
+    transition: background .3s ease-in-out;
+    border: 1px solid var(--light-font-solid);
+}
+
+.login-buttom-item:hover {
+    background-color: var(--primary-300);
+}

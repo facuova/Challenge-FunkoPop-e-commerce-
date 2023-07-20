@@ -1,0 +1,109 @@
+/*banner*/
+.banner {    
+  background-image: url(../../img/funkos-banner.webp);
+  background-size:cover;
+  padding-top: var(--spacing-128);
+  padding-bottom: var(--spacing-128);
+  background-attachment: fixed;
+  position:relative;
+}
+  
+.banner::before {
+  content:"";
+  background-color: rgba(0,0,0,0);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(2px) brightness(.9);
+}
+  
+.banner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap:var(--spacing-20);
+  z-index: 2;
+  position: relative;
+}
+  
+.banner-title {
+  font-size: var(--font-jumbo);
+  color: var(--light-font-solid);  
+}
+  
+.banner-text {
+  font-size: var(--font-medium);
+  color: var(--light-font-solid);  
+}
+  
+.banner-link {
+  display:inline-block;
+  font-size: var(--font-medium);
+  font-family: var(--alternative-font);
+  font-weight: 500;
+  color:var(--dark-solid);
+  background-color: var(--light-bg-solid);
+  border-radius: 30px;
+  padding: var(--spacing-12) var(--spacing-68); 
+  margin-top: var(--spacing-24);
+  transition: all .3s ease-in-out;     
+}
+  
+.banner-link:hover {
+  background-color: var(--primary-900);
+  color: var(--light-bg-solid);
+}
+
+/*Acá empezas a crear las clases. La clase flex-container con direcion de fila seria la principal y luego defino la clase 
+flex-container-xxxxxx con direccion de columna que sería la clase hija para ser más específico.
+Luego para ir entrando a cada etiqueta voy a usar la ".clase etiqueta {}" para acceder a cada uno de los hijos 
+y darle el formato deseado*/
+
+/*Collection*/
+.collection {
+    display: flex;      
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap:var(--spacing-16);
+  margin: var(--spacing-36) 0 ;
+}
+
+.collection:nth-child(2) .prueba{
+  order: -1;    
+}
+
+.collection-article {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  gap:var(--spacing-24);
+}
+
+.collection-article-text {
+  display: inline-block;
+  border-bottom: solid var(--primary-900);
+  padding-bottom: var(--spacing-20);    
+}
+
+.collection-article-link {
+  display: inline-block;
+  align-self: start;
+  font-size: var(--font-large);
+  background-color: var(--dark-bg-solid);
+  color:var(--light-font-solid);
+  font-weight:bold;
+  border-radius: 50px;
+  margin-top:var(--spacing-28) ;
+  padding: var(--spacing-12) var(--spacing-36);
+  transition: background .3s ease-in-out;
+}
+
+.collection-article-link:hover {
+  background-color: var(--primary-900);
+}
+  

@@ -1,0 +1,15 @@
+.footer {
+    background-color: var(--dark-bg-solid);
+    padding: var(--spacing-36);
+}
+
+.footer-logo{
+    align-self: flex-end;
+  }
+  
+  .footer-copy {
+    font-size: var(--spacing-20);
+    color:var(--light-bg-solid);
+    text-align: center;
+    padding-bottom:var(--spacing-16);
+  }

@@ -1,0 +1,27 @@
+.login-form {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-20);
+  margin-bottom: var(--spacing-12);
+}
+
+.login-form-label {
+  font-family: var(--base-font);
+  font-size: var(--font-large);
+  font-weight: 800;
+}
+
+.login-form-input {
+    border:none;
+    border-bottom: 2px solid var(--primary-900);
+}
+
+.login-form-input:focus {
+    outline: none;
+}
+
+.login-form-input::placeholder {
+    font-style: italic;
+    color: var(--grey-light-ph-solid) ;
+}
+

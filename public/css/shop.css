@@ -326,9 +326,24 @@ Pero fue la forma que encontré para acomodar todo la sección de FILTRAR*/
 }
 /*Estas son las clases que acomodan las img de losproductos y descripción en las 
 columnas y fila correspondiente*/
-article {
-    padding-bottom: var(--spacing-16);
+.shop-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: var(--spacing-36);
 }
+
+.shop-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-28);
+}
+
+.shop-item {
+    flex: 1 1 clamp(250px, 30%, 30%);
+}
+
+
 .grid-container-section-1 {
     margin-top: var(--spacing-68);
     margin-bottom: var(--spacing-68);
@@ -457,6 +472,7 @@ div p:last-child{
 }
 
 #footerNavbar-item3 {
+    color: var(--light-font-solid);
     grid-column: 2/3;
     grid-row: 3/4;   
     align-self: end; 

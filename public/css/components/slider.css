@@ -1,0 +1,27 @@
+/*Slider*/
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  gap:var(--spacing-16);
+}
+
+.slider-items {
+  display:flex;  
+  gap: var(--spacing-24)
+}
+
+iconify-icon {
+  color: var(--dark-bg-solid);
+  font-size: var(--font-small);
+  font-weight: 700;
+}
+/*Override*/
+
+.glide__arrow--left{
+  left: 0;
+}
+
+.glide__arrow--right{
+  right:0
+}
