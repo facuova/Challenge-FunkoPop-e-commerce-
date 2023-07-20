@@ -32,6 +32,7 @@ server.use() indicamos que peticiones deben ser respondidas con esas rutas*/
 server.use(`/`, rutas) // '/etc' ejecuta rutas
 server.use(`/shop`, rutasShop)
 server.use(`/admin`, rutasAdmin)
+
 // Middleware para manejar el error 404 
 server.use((req,res) => res.status(404).send(`Recurso no encontrado`))
 
