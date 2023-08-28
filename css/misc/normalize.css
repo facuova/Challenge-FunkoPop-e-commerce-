@@ -1,0 +1,63 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--base-font);
+  font-size: 62.5%; /*  medida(16px = 1em) calculo(16px*0.625 = 10px)*/
+  color: var(--dark-solid);
+}
+
+a {
+  font-family: inherit;
+  text-decoration: none;
+  color: inherit;
+  padding: 10px;
+}
+
+header,
+footer {
+  font-family: var(--alternative-font); 
+  font-size: var(--font-intermediate);
+  color: var(--light-font-solid);
+  background-color: var(--dark-bg-solid);
+}
+
+header nav{
+  padding-top: var(--spacing-28);
+  padding-bottom: var(--spacing-28);
+}
+
+ul, ol {list-style-type: none}
+
+h3 {
+  font-family: var(--alternative-font);
+  font-size: var(--font-display);
+  font-weight: 500;
+}
+
+p {
+  font-family: var(--alternative-font);
+  font-size: var(--font-large);
+  font-weight: 400;
+  color:var(--grey-font-solid);
+}
+
+h2 {
+  font-family: var(--alternative-font);
+  font-size: var(--font-display);
+  font-weight: 700;
+}
+
+footer nav {
+  padding-top: var(--spacing-68);
+  padding-bottom: var(--spacing-68);
+}
+
+main img {
+    width: 100%
+}

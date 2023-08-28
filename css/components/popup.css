@@ -1,0 +1,28 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Popup de terminos y condiciones*/
+.popup-content {
+  width: 80%;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.popup h2 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.popup p {
+  font-size: var(--font-medium);
+  margin-bottom: 20px;
+}
