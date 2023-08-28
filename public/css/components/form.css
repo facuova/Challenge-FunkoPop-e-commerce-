@@ -12,16 +12,63 @@
 }
 
 .login-form-input {
-    border:none;
-    border-bottom: 2px solid var(--primary-900);
+  border:none;
+  border-bottom: 2px solid var(--primary-900);
+  font-size: var(--font-intermediate);
+  padding-left: var(--spacing-8);
 }
 
 .login-form-input:focus {
-    outline: none;
+  outline: none;
 }
 
 .login-form-input::placeholder {
-    font-style: italic;
-    color: var(--grey-light-ph-solid) ;
+  font-style: italic;
+  color: var(--grey-light-ph-solid) ;
 }
 
+/*Edit and create*/ 
+select {
+  font-size: var(--font-intermediate);
+  padding-left: var(--spacing-8);
+}
+
+textarea {
+  font-family: var(--base-font);
+  font-size: var(--font-medium);
+  font-weight: 700;
+  padding: var(--spacing-8);
+  width: 100%;
+  border: 2px solid var(--dark-bg-solid);
+  border-radius: 6px;
+}
+
+.form-select {
+  width: 24.5rem;
+  height: 4.428rem;
+  border: 2px solid var(--dark-bg-solid);
+  border-radius: 6px;
+}
+
+#inputName {
+  width: 24.5rem;
+}
+
+#selectCuotas {
+  width: 34.5rem;
+}
+
+#inputSku {
+  text-align: center;
+  width:var(--spacing-128) ;
+}
+
+#inputStock {
+  text-align: center;
+  width: 5.5rem;
+}
+
+#inputDesc {
+  text-align: center;
+  width: 5.5rem;
+}

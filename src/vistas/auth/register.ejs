@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head')
+    <title>Register</title>     
+</head>
+
+<body>
+    <header> 
+        <nav  class="nav-container container">
+           <picture >
+                <a  href="/" >
+                    <img src="/img/branding/logo_light_horizontal.svg" id="logo-sup" alt="Icono de FunkoShop">
+                </a>
+            </picture>    
+            <a class="navbar-link" href="">SALIR</a>
+        </nav> 
+
+    </header>
+    <main >        
+        <section class="login-container container">
+            <h2>CREA TU CUENTA</h2>
+            <p>Completa el formulario para ser parte del mundo de los Funkos</p>
+            <form class="login-form-container">
+                <div class="login-form" action="">
+                    <label class="login-form-label" for="registerUserName">Nombre:</label>
+                    <input class="login-form-input" type="text" placeholder="John" id="registerUserName">
+                </div>
+                <div class="login-form" action="">
+                    <label class="login-form-label" for="registerUserLastName">Apellido:</label>
+                    <input class="login-form-input" type="text" placeholder="Doe" id="registerUserLastName">
+                </div> 
+                <div class="login-form" action="">
+                    <label class="login-form-label" for="registerUserEmail">Email:</label>
+                    <input class="login-form-input" type="text" placeholder="johndoe@correo.com" id="registerUserEmail">
+                </div> 
+                <div class="login-form" action="">
+                    <label class="login-form-label" for="registerUserPassword">Contraseña:</label>
+                    <input class="login-form-input" type="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" id="registerUserPassword">
+                </div> 
+                <div class="login-form" action="">
+                    <label class="login-form-label" for="registerUserConfirmPass">Repita Contraseña:</label>
+                    <input class="login-form-input" type="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" id="registerUserConfirmPass">
+                </div>
+                <div class="login-buttom-container">
+                    <input class="login-buttom-item" id="registerButton" type="submit" value="Registrar">
+                    <div>
+                        <input type="checkbox" name="termsAndCondChek" id="termsAndCondChek">
+                        <label for="termsAndCondChek">Acepto <a href="" id="termsAndConditions">Termino y condiciones</a></label>
+                    </div>
+                </div>
+            </form>
+
+            <div id="popup" class="popup">
+                <div class="popup-content">
+                <h3>Términos y condiciones</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates doloribus quae fuga ducimus autem cum. Minima at ipsa aliquid dolore illum. Dolorem ea voluptatem at, velit delectus ab optio itaque?</p>
+                  <button class="login-buttom-item" id="closePopup">Cerrar</button>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <%- include('../partials/footer')
+
+</body>
+</html>

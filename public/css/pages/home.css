@@ -106,4 +106,184 @@ y darle el formato deseado*/
 .collection-article-link:hover {
   background-color: var(--primary-900);
 }
+
+/*Acá realizamos el breakpoint para celulares con un maximo de 400px.*/
+@media screen and (max-width: 400px) {
+
+  a {
+    padding: var(--spacing-8);
+  }
+
+  header,
+  footer {
+    font-size: var(--font-xsmall);
+  }
+
+  h3 {
+    text-align: center;
+    font-size: var(--font-jumbo);
+  }
+
+  p {
+    text-align: center;
+    font-size: var(--font-intermediate);
+  }
+
+  h2 {
+    text-align:center;
+    font-size: var(--font-jumbo);
+  }
+
+  img {
+    width: 75%;
+  }
+  /*Header*/
+  .container {
+    width: 34rem;
+    margin:auto;
+  }
   
+  .nav-container {  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-8);
+  }
+
+  .nav-container > picture > a > img {
+    margin-left: 3.2rem;
+  }
+
+  .navbar-list {
+    gap: var(--spacing-8);
+  }
+
+  .navbar-list img {
+    width: 50%;
+  }
+
+  .navbar-link {
+    padding: var(--spacing-8) var(--spacing-8);
+  }
+
+  .navbar-link:hover {
+    background-color: var(--primary-900);
+  }
+
+  .with-submenu:hover .submenu {
+    display:block;
+  }
+
+  .submenu {
+    width: var(--spacing-128);
+  }
+
+  .submenu-item {
+    padding: 0 var(--spacing-8);
+  }
+
+  .submenu-link {
+    font-size: var(--font-xsmall);
+  }
+
+  .submenu-link:hover {
+    background-color: var(--primary-900);
+  }
+
+  /*banner*/
+  .banner {    
+    background-size: auto;
+    padding-top: var(--spacing-68);
+    padding-bottom: var(--spacing-68);
+  }
+
+  .banner-container {
+    align-items: center;
+  }
+
+  .banner-text {
+    text-align: center;
+    font-size: var(--font-medium);
+    color: var(--light-font-solid);  
+  }
+
+  /*Collection*/
+  .collection {
+    display: flex;
+    flex-direction: column;  
+  }
+
+  .collection:nth-child(2) .prueba{
+    order: 2;    
+  }
+  .collection-article {
+    align-items: center;
+  }
+  
+  .collection-article-text {
+    border-bottom: solid var(--light-bg-solid);
+    padding-bottom: 0;    
+  }
+  .collection > picture {
+    border-bottom: solid var(--primary-900);
+    padding-bottom: var(--spacing-20); 
+  }
+
+  .collection-article-link {
+    align-self: center;
+    font-size: var(--font-intermediate);
+    margin-top:0 ;
+  }
+  
+  .slider {
+    gap:var(--spacing-8);  
+  }
+
+  .slider-items {
+    flex-direction: column;
+    gap: var(--spacing-12);
+  }
+ 
+  .card-item-div  {
+    align-items: center;
+    gap: var(--spacing-8);
+    padding: var(--spacing-12);
+  }
+
+  .card-item-div-text{
+    font-size: var(--font-xsmall);
+  }
+
+  .card-item-div-title {
+    font-size: var(--font-small);
+  }
+
+  .card-item-div-price {
+    font-size: var(--font-small);
+  }
+
+  .footer-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-copy {
+    font-size: var(--spacing-16);
+    padding-bottom:var(--spacing-16);
+  }
+
+  /*Item*/
+  .item-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .item-article {
+    align-items: center;
+  }
+
+  .item-article-offers {
+    text-align: center;
+  }
+}

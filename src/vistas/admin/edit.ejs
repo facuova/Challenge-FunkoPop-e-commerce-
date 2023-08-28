@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') -%>
+    <title>Create Item</title>
+    
+</head>
+
+<body>
+    <header> 
+        <nav class="container nav-container">
+           <picture >
+                <a href="/" >
+                    <img src="/img/branding/logo_light_horizontal.svg" id="logo-sup" alt="Icono de FunkoShop">
+                </a>
+            </picture>    
+            <a href="">SALIR</a>
+        </nav>        
+    </header>
+    <main class="container" >        
+        <h2 class="editCreate-title">EDITAR ITEM</h2>
+        
+        <form class="editCreate-container"  action="/admin/edit/<%= item[0].product_id %>?_method=PUT" method="POST" enctype="application/x-www-form-urlencoded">
+            <div class="editCreate-div1">    
+                <div class="editCreate-div1-form">
+                    <label class="login-form-label" for="">Categoría:</label>
+                    <select class="form-select" name="category" required>
+                        <option value="" disabled selected hidden>Seleccionar</option>
+                        <% categories.forEach((category, i) => { %>
+                          <option value="<%= i+1%>"><%= category.category_name%></option>
+                        <% }); %>
+                    </select>
+                </div>
+                <div class="editCreate-div1-form">
+                    <label  class="login-form-label" for="">Licencia:</label>
+                    <select class="form-select" name="licence" required>
+                        <option value="" disabled selected hidden>Seleccionar</option>
+                        <% licences.forEach((licences, i) => { %>
+                          <option value="<%= i+1%>"><%= licences.licence_name%></option>
+                        <% }); %>
+                    </select>
+                </div>
+            </div>
+            <div class="editCreate-div1">
+                <label class="login-form-label" for="">Nombre del producto:</label>
+                <input class="login-form-input" name="name" id="inputName" type="text" placeholder="Kakashi Hatake Shippuden Saga" value="<%= item[0].product_name %>" required>
+            </div>    
+            <textarea name="description" id="" cols="30" rows="6"><%= item[0].product_description %></textarea>
+            <div class="editCreate-div1">
+                <div class="editCreate-div1-form">
+                    <label class="login-form-label" for="">SKU:</label>
+                    <input class="login-form-input" name="sku" id="inputSku" type="text" placeholder="SSK111AB001" value="<%= item[0].sku %>" required>
+                </div>    
+                <div class="editCreate-div1-form">
+                    <label class="login-form-label" for="">PRECIO:</label>
+                    <input class="login-form-input" name="price" id="inputSku" type="text" placeholder="$ 0.000,00" value="<%= item[0].price %>" required>
+                </div> 
+                <div class="editCreate-div1-form">
+                    <label class="login-form-label" for="">STOCK:</label>
+                    <input class="login-form-input" name="stock" id="inputStock" type="text" placeholder="1" value="<%= item[0].stock %>" required>
+                </div>     
+            </div>
+            <div class="editCreate-div1">
+                <div class="editCreate-div1-form">
+                    <label class="login-form-label" for="">Descuento:</label>
+                    <input class="login-form-input" name="discount" id="inputDesc" type="text" placeholder="0.00%" value="<%= item[0].discount %>" required>
+                </div> 
+                <div class="editCreate-div1-form">
+                <label class="login-form-label" for="">Cuotas:</label>
+                    <select class="form-select" name="dues" id="selectCuotas">
+                        <option <% if (item[0].dues === 0) { %>selected<% } %> value="0">Sin cuotas</option>
+                        <option <% if (item[0].dues === 3) { %>selected<% } %> value="3">3 cuotas s/ interés</option>
+                        <option <% if (item[0].dues === 6) { %>selected<% } %> value="6">6 cuotas s/ interés</option>
+                        <option <% if (item[0].dues === 9) { %>selected<% } %> value="9">9 cuotas s/ interés</option>
+                        <option <% if (item[0].dues === 12) { %>selected<% } %> value="12">12 cuotas s/ interés</option>
+                        <option <% if (item[0].dues === 18) { %>selected<% } %> value="18">18 cuotas s/ interés</option>
+                        <option <% if (item[0].dues === 24) { %>selected<% } %> value="24">24 cuotas s/ interés</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <div class="editCreate-div1-form">
+                    <label class="login-form-label" for="">Imágenes:</label>
+                    <input type="file" name="images" id="img" multiple>
+                </div>
+            </div>
+            <div class="editCreate-div1-form">
+                <div class="edit-img">
+                    <img src="/img<%= item[0].image_front %>" alt="<%= item.product_name %>">
+                    <p class="edit__img-side">Frente</p>
+                </div>
+                <div class="edit-img">
+                    <img src="/img<%= item[0].image_back %>" alt="<%= item.product_name %> en caja">
+                    <p class="edit__img-side">Dorso</p>
+                </div>
+            </div>
+            <div>
+                <input class="login-buttom-item" type="submit" value="Modificar Producto">
+            </div>
+        </form>
+    </main>
+
+    <%- include('../partials/footer') -%>
+
+</body>
+</html>

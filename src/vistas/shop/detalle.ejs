@@ -49,14 +49,14 @@
     <main class="main-container" >        
         <section class="item-container container">
             <picture class="card-item-picture"> 
-                <img class="card-item-img-front" src="../../img<%= item[0].image_front %>" id="img-primary" alt="<%= item.product_description %>">   
-                <img class="card-item-img-back" src="../../img<%= item[0].image_back %>" alt="<%= item.product_description %>">
+                <img class="card-item-img-front" src="../../img<%= item[0].image_front %>" id="img-primary" alt="<%= item[0].product_description %>">   
+                <img class="card-item-img-back" src="../../img<%= item[0].image_back %>" alt="<%= item[0].product_description %>">
             </picture>
             <article class="item-article">
                 <p><%= item[0].licence_name %></p>
                 <h3 class="item-article-title "><%= item[0].product_name%></h3>
                 <p ><%= item[0].product_description %></p>
-                <h3  class="item-article-price"><%= item[0].price%></h3>  
+                <h3  class="item-article-price">$<%= item[0].price%></h3>  
                 <form class="item-article-div-container" action="#" method="POST" enctype="application/x-www-form-urlencoded">
                     <button id="subtract" class="item-article-div-button" type="button">-</button>
                     <input class="item-article-div-input" type="text" name="cantidad" id="cantidad" placeholder="0">
@@ -71,25 +71,27 @@
             <h2>PRODUCTOS RELACIONADOS:</h2>
             <div class="glide__track" data-glide-el="track">
                 <ul class="glide__slides">
-                      
+                    <% items.forEach(i => { %> 
+                        <% if (item[0].licence_id === i.licence_id) { %>
                         <li class="glide__slide">
                             <article  class="card-item">
-                                <a href="">
+                                <a href="/shop/item/<%= i.product_id%>"">
                                     <picture class="card-item-picture">
                                         <span class="card-item-tag">Nuevo</span>
-                                        <img class="card-item-img-front" src="" alt="Figura coleccionable de Funko de Storm Tropper de Star Wars">
-                                        <img class="card-item-img-back" src="" alt="Caja de figura coleccionable de Funko de Storm Tropper de Star Wars">
+                                        <img class="card-item-img-front" src="../../img<%= i.image_front%>" alt="<%= i.product_description %>">
+                                        <img class="card-item-img-back" src="../../img<%= i.image_back%>" alt="<%= i.product_description %>">
                                     </picture>
                                     <div class="card-item-div">
                                         <p class="card-item-div-text">STAR WARS</p>
-                                        <h4 class="card-item-div-title"></h4>
-                                        <p class="card-item-div-price"></p>
-                                        <p class="card-item-div-offers">3 COUTAS SIN INTERÉS</p>
+                                        <h4 class="card-item-div-title"><%= i.product_name %></h4>
+                                        <p class="card-item-div-price"><%= i.price %></p>
+                                        <p class="card-item-div-offers"><%= i.dues %> COUTAS SIN INTERÉS</p>
                                     </div>
                                 </a>
                             </article>
                         </li>
-                    
+                        <% } %>
+                    <% }) %> 
                 </ul>
             </div>
             <div class="glide__arrows" data-glide-el="controls">

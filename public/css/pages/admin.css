@@ -1,0 +1,87 @@
+#admin {
+    margin: var(--spacing-68) auto;
+}
+
+.admin-buscar {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-16);
+    margin-bottom: var(--spacing-36);
+}
+
+
+.admin-buscar-barra {
+    font-size: var(--font-medium);
+    padding: var(--spacing-8) var(--spacing-8);
+    border: 2px solid var(--dark-solid);
+    border-radius: 6px;
+    outline: none;
+    flex: 0 0 35%;
+}
+
+.admin-lista {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-24);
+}
+
+.admin-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-24);
+}
+
+.admin-header h2 {
+    font-size: var(--font-jumbo) ;
+}
+
+.admin-header span {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-16);
+    font-size: var(--font-small);
+    font-weight: bold;
+}
+
+
+.admin-header img {
+    width: var(--spacing-36);
+    height: var(--spacing-36);
+}
+
+.admin-table {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-16);
+}
+
+.admin-table-header,
+.admin-table-row {
+    display: grid;
+    grid-template-columns: 40px 1.5fr 3fr 3fr 40px 40px;
+    align-items: center;
+    column-gap: var(--spacing-16);
+    font-size: var(--font-medium);
+    font-weight: 500;
+}
+
+.admin-table-header {
+    margin-bottom: var(--spacing-24);
+    background-color: var(--light-font-solid);
+    color: var(--dark-solid);
+}
+
+.admin-table-header h3{
+    font-size:var(--font-small);   
+}
+
+.admin-table-row p{
+    font-size:var(--font-small);   
+}
+
+.admin-table__btn-delete {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}

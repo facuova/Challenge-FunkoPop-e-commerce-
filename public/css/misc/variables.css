@@ -11,9 +11,9 @@
     --secondary-300: rgba(29, 132, 181, 0.3);
   
     --dark-solid: #1F1F1F;
-    --dark-900: rgba(31, 31, 31 0.9);
-    --dark-500: rgba(31, 31, 31 0.5);
-    --dark-300: rgba(31, 31, 31 0.3);
+    --dark-900: rgba(31, 31, 31, 0.9);
+    --dark-500: rgba(31, 31, 31, 0.5);
+    --dark-300: rgba(31, 31, 31, 0.3);
   
     --dark-bg-solid: #30343F;
     --light-bg-solid: #FAFAFF;

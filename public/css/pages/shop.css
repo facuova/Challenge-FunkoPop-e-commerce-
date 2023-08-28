@@ -1,0 +1,135 @@
+.shop {
+    display: flex;
+    margin: var(--spacing-68) auto;
+}
+
+.shop-filters {
+    display: flex;
+    flex-direction: column;
+    gap:var(--spacing-28)
+}
+
+.filters-title {
+    font-size: var(--font-medium);
+    font-weight: 700;
+}
+
+.filters-search,
+.filters-order  {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-12);
+}
+
+.filters-search input,
+.filters-order select {
+    border-radius: 6px;
+    border: 2px solid var(--dark-solid);
+    font-size: var(--font-medium);
+    padding: var(--spacing-8);
+}
+
+.filters-price div {
+    margin-top: var(--spacing-12);
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.filters-price label {
+    font-size: var(--font-small);
+    font-weight: 700;
+}
+
+.filters-price input {
+    width: 70px;
+    text-align: center;
+    border-radius: 6px;
+    font-size: var(--font-medium);
+    border: 2px solid var(--dark-solid);
+    padding: 4px var(--spacing-8);
+}
+
+.filters-checks {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-8);
+}
+
+.filters-checks span {
+    margin-bottom: var(--spacing-12);
+}
+
+.filters-checks div {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-8);
+    font-weight: 700;
+    font-size: var(--font-medium);
+}
+
+.filters-checks div input {
+    accent-color: var(--primary-solid);
+    width: 16px;
+    height: 16px;
+}
+
+.shop-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: var(--spacing-36);
+}
+
+.shop-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-16);
+}
+
+.shop-item {
+    flex: 1 1 clamp(250px, 30%, 30%)
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-12);
+}
+
+.pagination .pagination-link {
+    display: block;
+    align-self: center;
+    font-size: var(--font-medium);
+    font-weight: 700;
+    border-radius: 4px;
+    padding: var(--spacing-16) var(--spacing-16);
+    border: 2px solid var(--dark-300);
+    transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.pagination .pagination-link:first-of-type,
+.pagination .pagination-link:last-of-type {
+    color: var(--dark-500);
+}
+
+.pagination .pagination-link:hover {
+    background-color: var(--primary-900);
+    color: var(--light-bg-solid);
+    border-color: var(--primary-500);
+}
+
+.pagination .pagination-link--selected {
+    border-color: var(--primary-solid);
+    color: var(--primary-solid);
+}
+
+@media screen and (max-width: 400px) {
+
+    .shop {
+        flex-direction: column;
+    }
+
+
+   
+}

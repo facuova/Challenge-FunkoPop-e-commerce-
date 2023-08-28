@@ -21,7 +21,7 @@ la data de estos formatos a uno que el servidor pueda manejar.*/
 server.use(express.urlencoded())
 server.use(express.json())
 
-server.use(method(`_metodo`))
+server.use(method(`_method`))
 
 //indicamos en nuestro entry point que usaremos un motor de plantillas y donde alojaremos los templates:
 server.set('view engine', 'ejs');

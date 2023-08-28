@@ -1,150 +1,91 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <%- include('../partials/head') %>
-    <link rel="stylesheet" href="/css/shop.css">
-    <title>Shop | Funkoshop </title>
-    
+    <%- include('../partials/head') %>   
+    <title>Shop | Funkoshop </title>  
 </head>
 
 <body>
-    <header> 
-        <nav class="container grid-container-barnav">
-            <picture>
-                <a href="/">
-                    <img src="/img/branding/logo_light_horizontal.svg" alt="Icono de FunkoShop">
-                </a>
-            </picture>    
-            <ul class="grid-container-barnav-ul">
-                <li class="grid-container-barnav-ul-item-1 with-submenu" >
-                    <a class="navbar-link with-icon" href="/shop" >SHOP <iconify-icon icon="mdi:chevron-down"></iconify-icon></a>
-                    <ul class="submenu">
-                        <li class="submenu-item">
-                            <a class="submenu-link" href="">FUNKOS</a>
-                        </li>
-                        <li class="submenu-item">
-                            <a class="submenu-link" href="">REMERAS</a>
-                        </li>
-                        <li class="submenu-item">
-                            <a class="submenu-link" href="">LLAVEROS</a>
-                        </li>
-                    </ul>
-                </li>
-                <li >
-                   <a class="navbar-link" href="/contacto">CONTACTO</a>
-                </li>
-                <li>
-                    <a class="navbar-link" href="/login">INGRESAR</a>
-                </li>
-                <li class="grid-container-barnav-ul-item-4">
-                    <a href="">
-                        <img src="/img/icons/cart-icon.svg"  alt="Ícono de carrito">
-                    </a>
-                </li>     
-            </ul>
-        </nav>        
-    </header>
-
-    <main class="container grid-container-main">
-        <!--Este nav es la barra lateral de búsqueda que se encuentra dentro de la 1era columna de grid-container-main-->
-        <nav class="container-form">
-            <!--Los siguientes formularios "BUSCAR, ORDENAR POR y PRECIO" están organizados de esta manera para práctiar 
-                posicionamiento SIN grid-->
-            
-            <h5 class="form-title1">BUSCAR:</h5>
-            <form class="form-input-1" action="" method="GET">
-                <input type="text"  name="buscar" placeholder=" Item o categoría">
-            </form>
-            <h5 class="form-title2">ORDENAR POR:</h5>
-            <form class="form-input-2" action="" method="GET">  
-                <select  name="ordenar por" id="ordenar por">
-                    <option value=""></option>
-                    <option value="mayor a menor">Mayor a menor</option>
-                    <option value="menor a mayor">Menor a mayor</option>
-                    <option value="más buscados">Más buscados</option>
-                </select>    
-            </form>
-            <h5 class="form-title3">PRECIO:</h5>
-            <form class="form-min-max" action="" method="GET">
-                <p>MIN <input type="numbers" name="min" placeholder="0"> - MAX <input type="numbers" name="max" placeholder="0">
-            </form>   
-            <!--Este formulario está organizado (1ero inputs, 2do label) de esta manera para hacerlo encajar con grid.-->            
-            <form action="" method="GET" class="grid-container-form-filt form-input-4">
-                <h5 class="grid-container-form-filt-titulo">FILTRAR:</h5>  
-                <input class="grid-container-form-filt-input-1" type="checkbox" name="filtro" id="filtro" value="nuevos">
-                <input class="grid-container-form-filt-input-2" type="checkbox" name="filtro" id="filtro" value="ofertas">
-                <input class="grid-container-form-filt-input-3" type="checkbox" name="filtro" id="filtro" value="edición especial">
-                <input class="grid-container-form-filt-input-4" type="checkbox" name="filtro" id="filtro" value="favoritos">
-                <label class="grid-container-form-filt-label-1" for="">NUEVOS</label>
-                <label class="grid-container-form-filt-label-2" for="">OFERTAS</label>   
-                <label class="grid-container-form-filt-label-3" for="">EDICIÓN ESPECIAL</label>
-                <label class="grid-container-form-filt-label-4" for="">FAVORITOS</label> 
-            </form>    
-        </nav>
-        <!--En las secciones está el artículo con la imagen del ITEM y sus datos-->
-        <!--En la 1era sección, la 2da columna de grid-container-main. Tiene 3 articulos. No entiendo si debería 
-        seguir haciendo más clases para que cada artículo quede bien encajado dentro de la grilla. Por ahora, lo 
-        solucioné con padding. -->
-        <section class="shop-container">
+    <%- include('../partials/header') %>
+    <main class="shop container">
+        <aside class="shop-filters">
+            <div class="filters-search">
+                <label  class="filters-title" for="search">BUSCAR:</label>
+                <input type="text" name="search" id="search" placeholder="item o categoría">
+            </div>
+            <div class="filters-order">
+                <label  class="filters-title" for="orderby">ORDERNAR POR:</label>
+                <select name="orderby" id="orderby">
+                    <option value="az">A-Z</option>
+                    <option value="za">Z-A</option>
+                    <option value="desc">Mayor precio</option>
+                    <option value="asc">Menor precio</option>
+                </select>
+            </div>
+            <div class="filters-price">
+                <span class="filters-title" >PRECIO</span>
+                <div>
+                    <label for="min">MIN</label>
+                    <input type="text" name="min" id="min" placeholder="0">
+                    <label for="max">- MAX</label>
+                    <input type="text" name="max" id="max" placeholder="0">
+                </div>
+            </div>
+            <div class="filters-checks">
+                <span class="filters-title" for="filter">FILTRAR</span>
+                <div>
+                    <input type="checkbox" name="filter" id="news" value="news">
+                    <label for="">NUEVOS</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="filter" id="offers" value="offers">
+                    <label for="">OFERTAS</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="filter" id="specials" value="specials">
+                    <label for="">EDICIÓN ESPECIAL</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="filter" id="favs" value="favs">
+                    <label for="">FAVORITOS</label>
+                </div>
+            </div>
+        </aside>
+        <section class="shop-content">
             <ul class="shop-items"> 
             <% items.forEach( item => { %>
                 <li class="shop-item">
-                    <article > card-item
-                        <a class="grid-article-responsive" href="/shop/item/<%= item.product_id%>"> card-item__link
-                            <picture class="card-item-picture"> card-item__cover
+                    <article  class="card-item" >
+                        <a href="/shop/item/<%= item.product_id%>"> 
+                            <picture class="card-item-picture"> 
+                                <span class="card-item-tag">Nuevo</span>
                                 <img class="card-item-img-front" src="../../img<%= item.image_front%>" alt="Figura coleccionable de Funko de Storm Tropper de Star Wars">
                                 <img class="card-item-img-back" src="../../img<%= item.image_back%>" alt="Figura coleccionable de caja de Funko de Storm Tropper de Star Wars">
                             </picture>
-                            <div class="grid-article-div-responsive"> card-item__content
-                                <p><%= item.licence_name%></p>
-                                <h4><%= item.product_name%></h4>
-                                <p><%= item.price%></p>
-                                <p><%= item.dues%> COUTAS SIN INTERÉS</p>
+                            <div class="card-item-div"> 
+                                <p class="card-item-div-text"><%= item.licence_name%></p>
+                                <h4 class="card-item-div-title"><%= item.product_name%></h4>
+                                <p class="card-item-div-price"><%= item.price%></p>
+                                <p class="card-item-div-offers"><%= item.dues%> COUTAS SIN INTERÉS</p>
                             </div>
                         </a>
                     </article>
                 </li>
                 <% }); %>  
-            </ul>    
+            </ul> 
+            <div class="pagination">
+                <a class="pagination-link"><iconify-icon icon="material-symbols:chevron-left-rounded"></iconify-icon></a>
+                <a class="pagination-link pagination-link--selected">1</a>
+                <a class="pagination-link">2</a>
+                <a class="pagination-link">...</a>
+                <a class="pagination-link">9</a>
+                <a class="pagination-link">10</a>
+                <a class="pagination-link"><iconify-icon icon="material-symbols:chevron-right"></iconify-icon></a>
+            </div>   
         </section>
-        <!--Acá hay 7 botones posicionados en la 5ta fila de grid-container-main-->
-        <div class="grid-container-div">
-            <button><iconify-icon icon="material-symbols:chevron-left-rounded"></iconify-icon></button>
-            <button>1</button>
-            <button>2</button>
-            <button>...</button>
-            <button>9</button>
-            <button>10</button>
-            <button><iconify-icon icon="material-symbols:chevron-right"></iconify-icon></button>
-        </div>
     </main>
-        <!--Acá voy a realizar una grilla de 2 filas y 4 columas-->
-    <footer>
-        <section class="container">
-            <nav class="grid-container-footerNavbar">
-                <ul id="footerNavbar-item1">
-                    <li>
-                        <a class="submenu-link" href="/shop">SHOP</a>
-                    </li>
-                    <li>
-                        <a class="submenu-link" href="/register">REGISTRARSE</a>
-                    </li>
-                    <li>
-                        <a class="submenu-link" href="/login">INGRESAR</a>
-                    </li>
-                    <li>
-                        <a class="submenu-link" href="/pages/contacto">CONTACTO</a>
-                    </li>
-                </ul>
-                <picture id="footerNavbar-item2" >
-                    <a href="/">
-                        <img   src="/img/branding/isotype.svg" alt="Isotipo de la marca FunkoShop">
-                    </a>
-                </picture> 
-                <p id="footerNavbar-item3">All rights reserved 2023 - Funkoshop &copy;</p>   
-            </nav>
-        </section>
-    </footer>
+        
+    <%- include('../partials/footer') %>
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
 </body>
 </html>

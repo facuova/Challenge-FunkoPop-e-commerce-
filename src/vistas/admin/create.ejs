@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') -%>
+    <title>Create Item</title>
+    
+</head>
+
+<body>
+    <header> 
+        <nav class="container nav-container">
+           <picture >
+                <a href="/" >
+                    <img src="/img/branding/logo_light_horizontal.svg" id="logo-sup" alt="Icono de FunkoShop">
+                </a>
+            </picture>    
+            <a href="">SALIR</a>
+        </nav>        
+    </header>
+
+    <main class="container" >        
+        <h2 class="editCreate-title">CREAR ITEM</h2>
+        <form  class="editCreate-container" action="/admin/create" method="POST" enctype="multipart/form-data">
+            <div class="editCreate-div1">    
+                <div class="editCreate-div1-form">
+                    <label class="login-form-label" for="">Categoría:</label>
+                    <select class="form-select" name="category" required>
+                        <option value="" disabled selected hidden>Seleccionar</option>
+                        <% categories.forEach((category, i) => { %>
+                          <option value="<%= i+1%>"><%= category.category_name%></option>
+                        <% }); %>
+                    </select>
+                </div>
+                <div class="editCreate-div1-form">
+                    <label  class="login-form-label" for="">Licencia:</label>
+                    <select class="form-select" name="licence" required>
+                        <option value="" disabled selected hidden>Seleccionar</option>
+                        <% licences.forEach((licences, i) => { %>
+                          <option value="<%= i+1%>"><%= licences.licence_name%></option>
+                        <% }); %>
+                    </select>
+                </div>
+            </div>
+            <div class="editCreate-div1">
+                <label class="login-form-label" for="">Nombre del producto:</label>
+                <input class="login-form-input" id="inputName" type="text" name="name" placeholder="Kakashi Hatake Shippuden Saga" required>
+            </div>    
+            <textarea name="description" id="" cols="30" rows="10" placeholder="Figura Funko coleccionable de Kakashi Hatake de la saga Naruto Shipudden invocando chidori." required></textarea>
+            <div class="editCreate-div1">
+                <div class="editCreate-div1-form">
+                    <label class="login-form-label" for="">SKU:</label>
+                    <input class="login-form-input" id="inputSku" type="text" name="sku" placeholder="SSK111AB001" required>
+                </div>    
+                <div class="editCreate-div1-form">
+                    <label class="login-form-label" for="">PRECIO:</label>
+                    <input class="login-form-input" id="inputSku" type="text" name="price" placeholder="$ 0.000,00" required>
+                </div> 
+                <div class="editCreate-div1-form">
+                    <label class="login-form-label" for="">STOCK:</label>
+                    <input class="login-form-input" id="inputStock" type="text" name ="stock"placeholder="1" required>
+                </div>     
+            </div>
+            <div class="editCreate-div1">
+                <div class="editCreate-div1-form">
+                    <label class="login-form-label" for="">Descuento:</label>
+                    <input class="login-form-input" id="inputDesc" type="text" name="discount" placeholder="0.00%" required>
+                </div> 
+                <div class="editCreate-div1-form">
+                <label class="login-form-label" for="">Cuotas:</label>
+                    <select class="form-select" name="dues" id="selectCuotas">
+                        <option value="0">Sin cuotas</option>
+                        <option value="3">3 cuotas s/ interés</option>
+                        <option value="6">6 cuotas s/ interés</option>
+                        <option value="9">9 cuotas s/ interés</option>
+                        <option value="12">12 cuotas s/ interés</option>
+                        <option value="18">18 cuotas s/ interés</option>
+                        <option value="24">24 cuotas s/ interés</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <div class="editCreate-div1-form">
+                    <label class="login-form-label" for="images">Imágenes:</label>
+                    <input type="file" name="images" id="img" multiple="multiple">
+                </div>
+            </div>
+            <div class="editCreate-div1-form">
+                <input class="login-buttom-item" type="submit" value="Agregar Producto">
+                <input class="login-buttom-item" type="reset" value="Limpiar">
+            </div>
+        </form>
+    </main>
+
+    <%- include('../partials/footer') -%>
+
+</body>
+</html>
