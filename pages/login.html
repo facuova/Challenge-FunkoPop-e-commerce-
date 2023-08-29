@@ -24,24 +24,25 @@
     <main>        
         <section class="login-container container">
             <h2>INGRESAR A MI CUENTA</h2>   
-            <div class="login-form-container">   
-                <form class="login-form" action="index.js" id="userEmailForm" method="GET">
+            <form class="login-form-container"action="index.js" id="userEmailForm" method="GET" enctype="application/x-www-form-urlencoded">   
+                <div class="login-form">
                     <label class="login-form-label" for="userEmailInput">Email:</label>
-                    <input type="text" name="user" id="userEmailInput" placeholder="ejemplo@correo.com">  
-                </form>
-                <form class="login-form"  action="index.js" id="userPassForm">
+                    <input class="login-form-input" type="text" name="user" id="userEmailInput" placeholder="ejemplo@correo.com">  
+                </div>
+                <div class="login-form">
                     <label class="login-form-label" for="userPasswordlInput">Contraseña:</label>
-                    <input type="text" name="user" id="userPasswordlInput" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
-                </form>
-            </div> 
-            <div class="login-buttom-container">
-                <button class="login-buttom-item" id="loginButton">Ingresar</button>
-                <form action="index.js" type="GET">
-                    <input type="checkbox" name="recordarme" id="remindMe">
-                    <label for="remindMe">Recordarme</label>
-                </form>
-            </div>
-            <a href="" id="forgotPassword">Olvidé mi contraseña</a>
+                    <input class="login-form-input" type="text" name="user" id="userPasswordlInput" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
+                </div>
+                <div class="login-buttom-container">
+                    <button class="login-buttom-item" id="loginButton">Ingresar</button>
+                    <div>
+                        <input type="checkbox" name="recordarme" id="remindMe">
+                        <label for="remindMe">Recordarme</label>
+                    </div>
+                </div>
+                <a href="" id="forgotPassword">Olvidé mi contraseña</a>
+            </form> 
+           
             
             <div id="popup" class="popup">
                 <div class="popup-content">
@@ -49,7 +50,7 @@
                     <p>Por favor ingrese el email donde quiere recibir los pasos para restablecer la constraseña.</p>
                     <form class="login-form" action="">
                         <label class="login-form-label" for="">Email: </label>
-                        <input type="text" placeholder="" id="">
+                        <input class="login-form-input" type="text" placeholder="" id="">
                     </form>
                     <button class="login-buttom-item" id="closePopup">Cerrar</button>
                     <button class="login-buttom-item" id="closePopup">Enviar</button>

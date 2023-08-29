@@ -29,7 +29,8 @@
   margin-left: var(--spacing-12);
 }
 
-.login-buttom-container a{
+.login-container a{
+  align-self: center;
   font-size: var(--font-xsmall);
   color:var(--secondary-solid);
   font-weight: 700;
