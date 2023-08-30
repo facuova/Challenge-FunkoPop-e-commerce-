@@ -24,31 +24,31 @@
         <section class="login-container container">
             <h2>CREA TU CUENTA</h2>
             <p>Completa el formulario para ser parte del mundo de los Funkos</p>
-            <div class="login-form-container">
-                <form class="login-form" action="">
+            <form class="login-form-container" action="index.js" type="GET" enctype="application/x-www-form-urlencoded">
+                <div class="login-form">
                     <label class="login-form-label" for="registerUserName">Nombre:</label>
-                    <input type="text" placeholder="John" id="registerUserName" required>
-                </form>
-                <form class="login-form" action="">
+                    <input class="login-form-input" type="text" placeholder="John" id="registerUserName" required>
+                </div>
+                <div class="login-form">
                     <label class="login-form-label" for="registerUserLastName">Apellido:</label>
-                    <input type="text" placeholder="Doe" id="registerUserLastName">
-                </form> 
-                <form class="login-form" action="">
+                    <input class="login-form-input" type="text" placeholder="Doe" id="registerUserLastName">
+                </div> 
+                <div class="login-form">
                     <label class="login-form-label" for="registerUserEmail">Email:</label>
-                    <input type="text" placeholder="johndoe@correo.com" id="registerUserEmail">
-                </form> 
-                <form class="login-form" action="">
+                    <input class="login-form-input" type="text" placeholder="johndoe@correo.com" id="registerUserEmail">
+                </div> 
+                <div class="login-form">
                     <label class="login-form-label" for="registerUserPassword">Contraseña:</label>
-                    <input type="text" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" id="registerUserPassword">
-                </form> 
-                <form class="login-form" action="">
+                    <input class="login-form-input" type="text" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" id="registerUserPassword">
+                </div> 
+                <div class="login-form">
                     <label class="login-form-label" for="registerUserConfirmPass">Repita Contraseña:</label>
-                    <input type="text" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" id="registerUserConfirmPass">
-                </form>
-            </div>
+                    <input class="login-form-input" type="text" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" id="registerUserConfirmPass">
+                </div>
+            </form>
             
             <div class="login-buttom-container">
-                <button class="login-buttom-item" id="registerButton">Registrar</button>
+                <button class="login-buttom-item" type="submit" id="registerButton">Registrar</button>
                 <form action="index.js" type="GET">
                     <input type="checkbox" name="termsAndCondChek" id="termsAndCondChek">
                     <label for="termsAndCondChek">Acepto</label>
