@@ -39,3 +39,31 @@
     display: flex;
     position: relative;
 }
+
+
+.card-item-picture img{
+    animation: fade .7s;
+}
+
+.card-item-tag {
+    font-size: var(--font-xsmall);
+    font-weight: 800;
+    text-transform: uppercase;
+    background-color: var(--primary-solid);
+    color: var(--light-font-solid);
+    padding: var(--spacing-8) var(--spacing-12);
+    position: absolute;
+    right: 0;
+}
+
+.card-item-img-back {
+    display:none;
+}
+
+.card-item-picture:hover .card-item-img-back {
+    display:block;
+}
+
+.card-item-picture:hover .card-item-img-front {
+    display:none;
+}

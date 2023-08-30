@@ -56,14 +56,10 @@
   color: var(--light-bg-solid);
 }
 
-/*Acá empezas a crear las clases. La clase flex-container con direcion de fila seria la principal y luego defino la clase 
-flex-container-xxxxxx con direccion de columna que sería la clase hija para ser más específico.
-Luego para ir entrando a cada etiqueta voy a usar la ".clase etiqueta {}" para acceder a cada uno de los hijos 
-y darle el formato deseado*/
 
 /*Collection*/
 .collection {
-    display: flex;      
+  display: flex;      
 }
 
 .main-container {
