@@ -38,11 +38,47 @@
                 <li>
                     <a class="navbar-link" href="/pages/login.html">INGRESAR</a>
                 </li>
-                <li >
-                    <a href="">
-                        <img src="../img/icons/cart-icon.svg"  alt="Ícono de carrito">
-                    </a>
-                </li>     
+                <li class="container-icon"><!--Acá empieza mi carrito-->
+                    <!--Icono-->
+                    <div class="container-cart-icon">
+                        <img class="icon-cart" src="../img/icons/cart-icon.svg"  alt="Ícono de carrito">
+                        <div class="count-products">
+                            <span id="contador-productos">0</span>
+                        </div>
+                    </div>
+                    
+                    <div class="container-cart-products hidden-cart">
+                        <div class="row-product hidden">
+                            <div class="cart-product">
+                                <div class="info-cart-product">
+                                    <span class="cantidad-producto-carrito">1</span>
+                                    <p class="titulo-producto-carrito">BABY YODA BLUEBALL</p>
+                                    <span class="precio-producto-carrito">$1799,99</span>
+                                </div>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="icon-close"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M6 18L18 6M6 6l12 12"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+    
+                        <div class="cart-total hidden">
+                            <h3>Total:</h3>
+                            <span class="total-pagar">$1799,99</span>
+                        </div>
+                        <p class="cart-empty">El carrito está vacío</p>
+                    </div>
+                </li>         
             </ul>
         </nav>        
     </header>
@@ -54,15 +90,16 @@
             </picture>
             <article class="item-article">
                 <p>STAR WARS</p>
-                <h3 class="item-article-title ">BABY YODA BLUEBALL</h3>
+                <h3 class="item-article-title">BABY YODA BLUEBALL</h3>
                 <p >Figura collecionable de Baby Yoda (Grogu) - The Mandalorian Saga, edición limitada.</p>
-                <h3  class="item-article-price">$1799,99.-</h3>  
+                <h3  class="item-article-price">$1799,99</h3>  
                 <div class="item-article-div-container">
                     <button class="item-article-div-button" id="button-subtract">-</button>
-                    <input class="item-article-div-input" type="numbers" name="cantidad" placeholder="0">
-                    <button class="item-article-div-button" >+</button>
-                    <button class="login-buttom-item">Agregar al carrito</button>
-                </div> 
+                    <input class="item-article-div-input" type="number" name="cantidad" placeholder="0" id="cantidad">
+                    <button class="item-article-div-button" id="button-plus" >+</button>
+                    
+                </div>      
+                <button class="login-buttom-item" id="Agregar-item">Agregar al carrito</button>            
                 <a href="" class="item-article-offers"><u>Ver métodos de pago</u> - 3 COUTAS SIN INTERÉS</a>
             </article>   
         </section>
@@ -151,6 +188,7 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
     <script src="../js/itemCount.js"></script>
-
+    <script src="../js/cart.js"></script>
+    
 </body>
 </html>
