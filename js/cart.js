@@ -111,7 +111,7 @@ const showCartHTML = () => {
     rowProduct.append(cartContainerProduct);
     
     total = total + parseFloat(product.cantidad) * parseFloat(product.precio.slice(1));
-    totalProducts = totalProducts + product.cantidad;
+    totalProducts = totalProducts + parseFloat(product.cantidad);
   });
   valorTotal.innerText = `$${total}`;
   countProducts.innerText = totalProducts;
