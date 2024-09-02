@@ -1,5 +1,5 @@
-const plus = document.querySelector('#plus');
-const subtract = document.querySelector('#subtract');
+const plus = document.querySelector('#button-plus');
+const subtract = document.querySelector('#button-subtract');
 const cantidad = document.querySelector('#cantidad');
 
 plus.addEventListener('click', () => cantidad.value = Number(cantidad.value) + 1);
